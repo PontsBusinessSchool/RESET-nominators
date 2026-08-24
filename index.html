@@ -1,0 +1,2542 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Leadership: RESET 2027, For Candidates</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&amp;family=Barlow:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --white:#ffffff;
+    --pale:#EAF2FF;
+    --pale-2:#DCE9FF;
+    --line:#C6DAFF;
+    --ink:#0B2B8C;        /* deep blue for body copy */
+    --headline:#1745E0;   /* bright blue for titles */
+    --red:#FF4433;        /* accent only */
+    --max:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--white);
+    color:var(--ink);
+    font-family:'Barlow', sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Barlow Condensed', sans-serif;
+    color:var(--headline);
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    margin:0;
+  }
+  a{color:var(--headline);}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 32px;}
+  section{padding:96px 0;}
+  .eyebrow{
+    font-family:'Barlow Condensed', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.18em;
+    font-weight:700;
+    font-size:17px;
+    color:var(--red);
+    margin-bottom:14px;
+    display:flex; align-items:center; gap:10px;
+  }
+  p{margin:0 0 16px; max-width:62ch;}
+  .lede{font-size:19px; color:var(--ink); max-width:56ch;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    padding:48px 0 40px;
+    overflow:hidden;
+    min-height:500px;
+    background:linear-gradient(180deg, var(--pale) 0%, #ffffff 100%);
+  }
+  .hero .wrap{position:relative; z-index:2;}
+  .tag-year{
+    display:inline-block;
+    color:var(--red);
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:800;
+    font-size:14px;
+    letter-spacing:0.08em;
+    margin-bottom:20px;
+  }
+  .hero h1{
+    font-size:clamp(52px, 8.6vw, 106px);
+    font-weight:900;
+    line-height:0.92;
+  }
+  .hero h1{color:var(--headline);}
+  .hero h1 span{display:contents; color:inherit;}
+  .hero-btn{ margin-top:24px; display:inline-block; }
+  .hero-sub{
+    margin-top:20px;
+    font-size:clamp(18px,2.2vw,23px);
+    max-width:780px;
+    color:var(--ink);
+    font-weight:500;
+  }
+  .hero-sub span{display:block; white-space:nowrap;}
+  @media (max-width:760px){
+    .hero-sub span{white-space:normal;}
+  }
+  .hero-meta{
+    display:flex; gap:40px; flex-wrap:wrap;
+    margin-top:56px;
+    padding-top:28px;
+    border-top:1px solid var(--line);
+  }
+  .hero-meta div b{
+    display:block;
+    font-family:'Barlow Condensed', sans-serif;
+    color:var(--headline);
+    font-size:28px;
+    font-weight:800;
+  }
+  .hero-meta div span{
+    font-size:13px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--ink);
+    opacity:0.75;
+  }
+  .wing{
+    position:absolute;
+    right:0; bottom:0;
+    height:min(80%, 520px);
+    max-width:46vw;
+    width:auto;
+    object-fit:contain;
+    display:block;
+    z-index:1;
+  }
+
+  /* ---------- TENSION STATEMENT ---------- */
+  .tension{
+    background:var(--white);
+    position:relative;
+    overflow:hidden;
+  }
+  .tension::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:url('assets/asset_01_30e04b2dd5a0.webp');
+    background-repeat:no-repeat;
+    background-position:right top;
+    background-size:auto 100%;
+    opacity:1;
+    pointer-events:none;
+  }
+  .tension .wrap{ position:relative; z-index:1; }
+  .tension .grid{
+    display:grid; grid-template-columns: 1.1fr 0.9fr; gap:64px; align-items:center;
+  }
+  .tension h2{
+    font-size:clamp(34px,4.2vw,52px);
+    font-weight:800;
+    line-height:1.05;
+    margin-bottom:24px;
+  }
+  .tension .callout{
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:800;
+    font-size:22px;
+    color:var(--red);
+    text-transform:uppercase;
+    margin-top:20px;
+  }
+  .panel{
+    background:var(--pale);
+    border-radius:24px;
+    padding:40px;
+  }
+  .panel ul{list-style:none; margin:0; padding:0;}
+  .panel li{
+    padding:14px 0;
+    border-bottom:1px solid var(--line);
+    font-size:16px;
+  }
+  .panel li:last-child{border-bottom:none;}
+
+  /* ---------- HOW IT WORKS ---------- */
+  .how{
+    background:var(--white);
+    padding-top:40px;
+    position:relative;
+    overflow:hidden;
+  }
+  .how::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:url('assets/asset_01_30e04b2dd5a0.webp');
+    background-repeat:no-repeat;
+    background-position:right top;
+    background-size:auto 100%;
+    opacity:1;
+    pointer-events:none;
+  }
+  .how .wrap{ position:relative; z-index:1; }
+  .how-stats{
+    display:flex; gap:0; flex-wrap:wrap;
+    margin-top:44px;
+    border-top:1px solid var(--line);
+  }
+  .how-stats div{
+    flex:1 1 160px;
+    padding:24px 28px 0 0;
+  }
+  .how-stats div b{
+    display:block;
+    font-family:'Barlow Condensed', sans-serif;
+    color:var(--headline);
+    font-size:40px;
+    font-weight:900;
+    line-height:1;
+  }
+  .how-stats div span{
+    display:block;
+    margin-top:6px;
+    font-size:13px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--ink);
+    opacity:0.75;
+  }
+
+  /* ---------- PILLARS ---------- */
+  .pillars{
+    background:var(--pale);
+    position:relative;
+    overflow:hidden;
+  }
+  .pillars .wrap{ position:relative; z-index:1; }
+  .section-head{ margin-bottom:56px; max-width:70ch;}
+  .section-head h2{ font-size:clamp(32px,4.5vw,54px); font-weight:800; line-height:1.03;}
+  .pillar-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:24px;
+  }
+  .pillar{
+    background:var(--white);
+    border-radius:20px;
+    padding:32px 28px;
+    border:1px solid var(--line);
+  }
+  .pillar .num{
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:900;
+    font-size:15px;
+    color:var(--red);
+    letter-spacing:0.05em;
+  }
+  .pillar h3{
+    font-size:24px;
+    font-weight:800;
+    margin:10px 0 12px;
+  }
+  .pillar p{font-size:15px; margin:0; color:var(--ink); opacity:0.85;}
+  .pillar h3::first-letter{color:var(--red);}
+
+  /* ---------- WHO ---------- */
+  .who{background:var(--white);}
+  .who-grid{
+    display:grid; grid-template-columns: 1.3fr 0.7fr; gap:56px; align-items:start;
+  }
+  .who-item{
+    display:grid; grid-template-columns:56px 1fr; gap:20px;
+    padding:26px 0;
+    border-top:1px solid var(--line);
+  }
+  .who-item:last-child{border-bottom:1px solid var(--line);}
+  .who-item .num{
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:900; font-size:34px; color:var(--red);
+  }
+  .who-item h3{font-size:21px; font-weight:800; margin-bottom:6px;}
+  .who-item p{font-size:15.5px; margin:0; color:var(--ink); opacity:0.85;}
+  .criteria{
+    background:var(--pale); border-radius:24px; padding:36px;
+    position:sticky; top:32px;
+  }
+  .criteria h4{
+    font-family:'Barlow Condensed', sans-serif;
+    color:var(--headline); text-transform:uppercase; font-weight:800;
+    font-size:15px; letter-spacing:0.1em; margin-bottom:20px;
+  }
+  .criteria ul{list-style:none; margin:0; padding:0;}
+  .criteria li{
+    font-size:15.5px; padding:10px 0 10px 26px; position:relative;
+    border-bottom:1px solid var(--line);
+  }
+  .criteria li:last-child{border-bottom:none;}
+  .criteria li::before{
+    content:"";
+    position:absolute; left:0; top:16px;
+    width:8px; height:8px; border-radius:50%;
+    background:var(--red);
+  }
+
+  /* ---------- TRANSFORM (2 col) ---------- */
+  .transform{background:var(--pale);}
+  .transform-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:28px;
+  }
+  .transform-card{
+    background:var(--white); border-radius:22px; padding:36px;
+    border:1px solid var(--line);
+  }
+  .transform-card .eyebrow{margin-bottom:20px;}
+  .transform-card h3{font-size:20px; font-weight:800; margin-bottom:8px;}
+  .transform-card p{font-size:15px; color:var(--ink); opacity:0.85; margin-bottom:22px;}
+  .quote{
+    grid-column:1/-1;
+    background:var(--headline); color:var(--white);
+    border-radius:22px; padding:40px 44px;
+    font-family:'Barlow Condensed', sans-serif;
+    font-size:clamp(20px,2.6vw,28px);
+    font-weight:600;
+    line-height:1.35;
+  }
+  .quote span{color:var(--red);}
+
+  /* ---------- JOURNEY TIMELINE ---------- */
+  .journey{background:var(--white); padding:56px 0;}
+  .timeline{
+    position:relative;
+    margin-top:36px;
+    padding-left:36px;
+  }
+  .t-line{
+    position:absolute;
+    width:2px;
+    background:var(--line);
+    top:0; left:2px; height:0;
+    transition:height 1s ease;
+  }
+  .t-item{
+    position:relative;
+    padding:0 0 24px 28px;
+  }
+  .t-dot{
+    position:absolute; left:-45px; top:2px;
+    width:16px; height:16px; border-radius:50%;
+    background:var(--white); border:3px solid var(--headline);
+    transform:scale(0);
+    transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
+  }
+  .t-item.in-view .t-dot{ transform:scale(1); }
+  .t-item.milestone .t-dot{
+    background:var(--red); border-color:var(--red);
+  }
+  .t-content{
+    opacity:0; transform:translateX(-16px);
+    transition:opacity 0.6s ease, transform 0.6s ease;
+  }
+  .t-item.in-view .t-content{ opacity:1; transform:translateX(0); }
+  .t-item .when{
+    font-family:'Barlow Condensed', sans-serif;
+    color:var(--red); font-weight:800; font-size:14px;
+    letter-spacing:0.08em; text-transform:uppercase;
+  }
+  .t-item h3{font-size:22px; font-weight:800; margin:4px 0 4px;}
+  .t-item .dates{font-size:14px; color:var(--ink); opacity:0.7;}
+
+  /* ---------- THEMES ---------- */
+  .themes{background:var(--pale);}
+  .theme-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
+  }
+  .theme{
+    background:var(--white); border-radius:18px; padding:28px;
+    border:1px solid var(--line);
+  }
+  .theme .idx{
+    font-family:'Barlow Condensed', sans-serif;
+    font-size:40px; font-weight:900; color:var(--pale-2);
+    -webkit-text-stroke:1.5px var(--headline);
+    color:transparent;
+    line-height:1;
+  }
+  .theme h3{font-size:18px; font-weight:800; margin:10px 0 8px;}
+  .theme p{font-size:14px; color:var(--ink); opacity:0.8; margin:0;}
+
+  /* ---------- WHY ---------- */
+  .why{background:var(--white);}
+  .why-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:24px;}
+  .why-item{padding:28px 0; border-top:1px solid var(--line);}
+  .why-item h3{font-size:20px; font-weight:800; margin-bottom:8px;}
+  .why-item p{font-size:15px; color:var(--ink); opacity:0.85; margin:0;}
+
+  /* ---------- PRICING ---------- */
+  .pricing{background:var(--white); border-top:1px solid var(--line);}
+  .price-grid{
+    display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px; margin-top:48px;
+  }
+  .price-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:20px; padding:32px;
+  }
+  .price-card .label{
+    font-family:'Barlow Condensed', sans-serif; font-weight:700;
+    text-transform:uppercase; letter-spacing:0.08em; font-size:13px;
+    color:var(--ink); opacity:0.7;
+  }
+  .price-card .value{
+    font-family:'Barlow Condensed', sans-serif; font-weight:900;
+    font-size:40px; margin:10px 0; color:var(--headline);
+  }
+  .price-card .value.amount{color:var(--red);}
+  .price-card p{font-size:14px; color:var(--ink); opacity:0.85; margin:0;}
+
+  /* ---------- CTA ---------- */
+  .cta{background:var(--white); text-align:center; padding:120px 0;}
+  .cta h2{font-size:clamp(34px,6vw,64px); font-weight:900; max-width:16ch; margin:0 auto 20px;}
+  .cta p{margin:0 auto 40px; font-size:18px;}
+  .btn{
+    display:inline-block;
+    background:transparent; color:var(--red); border:2px solid var(--red);
+    font-family:'Barlow Condensed', sans-serif; font-weight:800;
+    text-transform:uppercase; letter-spacing:0.06em;
+    padding:16px 42px; border-radius:999px; text-decoration:none;
+    font-size:16px;
+    transition:transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+  }
+  .btn:hover{ background:var(--red); color:var(--white); transform:translateY(-2px); }
+  .switch{
+    margin-top:28px; font-size:14px;
+  }
+  .switch a{color:var(--ink); text-decoration:underline; opacity:0.7;}
+
+  footer{
+    padding:40px 0; text-align:center; font-size:13px; color:var(--ink); opacity:0.6;
+    border-top:1px solid var(--line);
+  }
+
+  @media (max-width:860px){
+    .tension .grid, .who-grid, .transform-grid, .pillar-grid, .theme-grid, .why-grid, .price-grid{
+      grid-template-columns:1fr;
+    }
+    .criteria{position:static;}
+    .wing{display:none;}
+    .hero{min-height:auto; padding:48px 0 44px;}
+    section{padding:64px 0;}
+  }
+  /* ---------- TOP NAV ---------- */
+  .topnav{
+    position:sticky; top:0; z-index:100;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .topnav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 32px;
+  }
+  .topnav-logo img{ height:56px; width:auto; display:block; }
+  .topnav-links{ display:flex; align-items:center; gap:28px; }
+  .topnav-links a{
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:700; text-transform:uppercase; letter-spacing:0.05em;
+    font-size:13px; color:var(--ink); text-decoration:none;
+    opacity:0.8; transition:opacity 0.15s ease, color 0.15s ease;
+  }
+  .topnav-links a:hover{ color:var(--red); opacity:1; }
+  .topnav-btn{
+    background:transparent !important;
+    color:var(--red) !important;
+    border:2px solid var(--red);
+    opacity:1 !important;
+    padding:8px 20px;
+    border-radius:999px;
+    transition:background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  }
+  .topnav-btn:hover{ background:var(--red); color:var(--white) !important; transform:translateY(-1px); }
+
+  /* ---------- BACKGROUND ---------- */
+  .background{ background:var(--white); border-top:1px solid var(--line); padding:64px 0; }
+  .background-inner{
+    display:flex; align-items:center; gap:48px; flex-wrap:wrap;
+  }
+  .background-logos{ display:flex; align-items:center; gap:36px; flex:0 0 auto; }
+  .background-logos img{ height:44px; width:auto; display:block; }
+  .background p{
+    margin:0; font-size:15px; color:var(--ink); opacity:0.85; max-width:60ch; flex:1 1 380px;
+  }
+
+  @media (max-width:640px){
+    .topnav-inner{ padding:12px 20px; flex-wrap:wrap; gap:10px; }
+    .topnav-links{ gap:18px; }
+    .background-inner{ flex-direction:column; align-items:flex-start; }
+  }
+  /* ---------- BOTTOM CTA ---------- */
+  .bottom-cta{ background:var(--white); padding:96px 0; text-align:center; border-top:1px solid var(--line); }
+  .bottom-cta .wrap{ max-width:760px; }
+  .bottom-cta h2{ color:var(--headline); font-size:clamp(30px,4.5vw,46px); font-weight:900; margin:0 auto 12px; max-width:20ch; }
+  .bottom-cta p{ color:var(--ink); opacity:0.85; margin:0 auto 40px; font-size:16px; }
+  .bottom-cta-buttons{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+  .btn-primary{
+    background:var(--red); color:var(--white); border:2px solid var(--red);
+  }
+  .btn-primary:hover{ background:transparent; color:var(--red); transform:translateY(-2px); }
+
+
+  /* ---------- CANDIDATE NOMINATION FLOW ---------- */
+  .candidate-flow{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    background:rgba(11,43,140,.38);
+    padding:32px 20px;
+    overflow-y:auto;
+    align-items:flex-start;
+    justify-content:center;
+  }
+  .candidate-flow.is-open{display:flex;}
+  body.modal-open{overflow:hidden;}
+  .candidate-flow .flow-wrap{
+    position:relative;
+    width:min(760px,100%);
+    margin:auto;
+    padding:38px 36px 36px;
+    background:linear-gradient(180deg, var(--pale) 0%, #ffffff 320px);
+    border:1px solid var(--line);
+    border-radius:24px;
+    box-shadow:0 24px 70px rgba(11,43,140,.24);
+  }
+  .candidate-flow-close{
+    position:absolute;
+    top:16px;
+    right:18px;
+    width:42px;
+    height:42px;
+    border:0;
+    border-radius:999px;
+    background:var(--white);
+    color:var(--headline);
+    font-size:30px;
+    line-height:1;
+    cursor:pointer;
+    box-shadow:0 4px 16px rgba(11,43,140,.12);
+  }
+  .candidate-flow-close:hover{background:var(--pale-2);}
+  .candidate-flow-header{padding:6px 50px 28px 0;}
+  .candidate-flow-header h2{
+    font-size:clamp(38px,7vw,58px);
+    font-weight:900;
+    line-height:.98;
+    max-width:13ch;
+  }
+  .candidate-flow-header h2{color:var(--headline);}
+  .candidate-flow-header h2 span{display:inline; color:inherit;}
+  .candidate-flow-header p{font-size:17px; max-width:55ch; margin-top:18px;}
+  .candidate-gate,
+  .candidate-request-form{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:34px;
+  }
+  .candidate-gate{margin-bottom:22px;}
+  .candidate-gate .gate-label,
+  .candidate-request-form legend{
+    font-family:'Barlow Condensed', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    font-weight:700;
+    font-size:14px;
+    color:var(--red);
+  }
+  .candidate-gate h3{
+    font-size:clamp(28px,5vw,38px);
+    font-weight:900;
+    line-height:1;
+    margin:12px 0 14px;
+  }
+  .candidate-gate p{margin:0 0 16px; font-size:16px;}
+  .candidate-gate-note{
+    background:var(--pale);
+    border-left:4px solid var(--red);
+    border-radius:10px;
+    padding:14px 16px;
+    margin:18px 0 22px;
+    font-weight:600;
+  }
+  .candidate-request-form{margin-bottom:0;}
+  .candidate-request-form.form-hidden{display:none;}
+  .candidate-request-form fieldset{border:0; padding:0; margin:0 0 36px;}
+  .candidate-request-form fieldset:last-of-type{margin-bottom:0;}
+  .candidate-request-form legend{
+    padding:0 0 14px;
+    width:100%;
+    border-bottom:1px solid var(--line);
+    margin-bottom:20px;
+  }
+  .candidate-flow .field{margin-bottom:18px;}
+  .candidate-flow .field:last-child{margin-bottom:0;}
+  .candidate-flow .row2{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  .candidate-flow label{
+    display:block;
+    font-size:13px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    color:var(--ink);
+    opacity:.85;
+    margin-bottom:6px;
+  }
+  .candidate-flow .req{color:var(--red);}
+  .candidate-flow input[type=text],
+  .candidate-flow input[type=email],
+  .candidate-flow input[type=tel],
+  .candidate-flow textarea{
+    width:100%;
+    font-family:'Barlow', sans-serif;
+    font-size:16px;
+    color:var(--ink);
+    background:var(--pale);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:12px 14px;
+    transition:border-color .15s, background .15s;
+  }
+  .candidate-flow textarea{resize:vertical; min-height:96px;}
+  .candidate-flow input:focus,
+  .candidate-flow textarea:focus{
+    outline:none;
+    border-color:var(--headline);
+    background:var(--white);
+  }
+  .candidate-flow .hint{font-size:13px; color:var(--ink); opacity:.6; margin-top:6px;}
+  .candidate-flow .consent{
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+    background:var(--pale);
+    border-radius:12px;
+    padding:16px 18px;
+  }
+  .candidate-flow .consent input{margin-top:3px;}
+  .candidate-flow .consent label{
+    text-transform:none;
+    font-weight:500;
+    font-size:14.5px;
+    opacity:1;
+    margin:0;
+  }
+  .candidate-flow .flow-button{
+    font-family:'Barlow Condensed', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    font-weight:800;
+    font-size:17px;
+    color:var(--white);
+    background:var(--headline);
+    border:0;
+    border-radius:999px;
+    padding:15px 34px;
+    cursor:pointer;
+    transition:background .15s, transform .1s;
+  }
+  .candidate-flow .flow-button:hover{background:#0f34b0;}
+  .candidate-flow .flow-button:active{transform:scale(.98);}
+  .candidate-flow .submit-row{margin-top:32px;}
+  .candidate-flow .status{
+    display:none;
+    margin-top:20px;
+    padding:16px 18px;
+    border-radius:12px;
+    background:var(--pale-2);
+    color:var(--ink);
+    font-size:15px;
+    font-weight:600;
+  }
+  .candidate-flow .status.show{display:block;}
+  @media (max-width:560px){
+    .candidate-flow .row2{grid-template-columns:1fr;}
+    .candidate-flow{padding:14px 10px;}
+    .candidate-flow .flow-wrap{padding:32px 16px 20px; border-radius:18px;}
+    .candidate-flow-header{padding-right:44px;}
+    .candidate-flow-close{top:10px; right:10px;}
+    .candidate-gate,.candidate-request-form{padding:26px 22px;}
+  }
+
+/* Candidate page spacing refinements */
+.why{ padding-top:56px; }
+.cta{ padding:68px 0; }
+.cta h2{ margin-bottom:14px; }
+.cta p{ margin-bottom:26px; }
+.cta .switch{ margin-top:20px; }
+@media (max-width:760px){
+  .why{ padding-top:44px; }
+  .cta{ padding:52px 0; }
+}
+
+/* FINAL REQUESTED OVERRIDE — remove hummingbird background from tension section */
+.tension::before {
+  display: none !important;
+  background-image: none !important;
+  content: none !important;
+}
+
+
+
+  /* ---------- MENTORS & FACULTY ---------- */
+  .mentors-section{
+    background:linear-gradient(180deg, var(--white) 0%, var(--pale) 100%);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .mentors-head{
+    display:grid;
+    grid-template-columns:minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap:48px;
+    align-items:end;
+    margin-bottom:44px;
+  }
+  .mentors-head h2{
+    font-size:clamp(42px,5.5vw,68px);
+    font-weight:900;
+    line-height:.98;
+    max-width:11ch;
+  }
+  .mentors-head .lede{
+    margin:0;
+    max-width:54ch;
+  }
+  .mentors-grid{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:18px;
+  }
+  .mentor-card{
+    background:rgba(255,255,255,.94);
+    border:1px solid var(--line);
+    border-top:4px solid var(--headline);
+    padding:24px 22px 22px;
+    min-height:205px;
+    display:flex;
+    flex-direction:column;
+  }
+  .mentor-card h3{
+    margin:0 0 10px;
+    font-size:24px;
+    line-height:1.05;
+    font-weight:800;
+    color:var(--headline);
+  }
+  .mentor-role{
+    margin:0 0 18px;
+    font-size:16px;
+    line-height:1.45;
+    color:var(--ink);
+  }
+  .mentor-location{
+    margin-top:auto;
+    margin-bottom:0;
+    font-family:'Barlow Condensed', sans-serif;
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    color:var(--red);
+  }
+  @media (max-width:980px){
+    .mentors-head{grid-template-columns:1fr; gap:18px;}
+    .mentors-head h2{max-width:none;}
+    .mentors-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  }
+  @media (max-width:560px){
+    .mentors-grid{grid-template-columns:1fr;}
+    .mentor-card{min-height:0;}
+  }
+
+
+  /* ---------- DECORATIVE ART BREAKS ---------- */
+  .reset-art-break{
+    position:relative;
+    width:100%;
+    height:clamp(180px, 20vw, 300px);
+    background-color:#fff;
+    background-repeat:no-repeat;
+    overflow:hidden;
+  }
+  .reset-art-break.flora{
+    background-image:url("assets/asset_02_896d7ee9a068.png");
+    background-size:cover;
+    background-position:right 82%;
+  }
+  .reset-art-break.jelly{
+    background-image:url("assets/asset_03_593ac3c55541.png");
+    background-size:cover;
+    background-position:left 18%;
+  }
+  .reset-art-break.give{
+    background-image:url("assets/asset_04_5af5f1c6f2af.png");
+    background-size:cover;
+    background-position:right 52%;
+  }
+  .reset-art-break.lobster{
+    background-image:url("assets/asset_05_60b854757dc1.png");
+    background-size:cover;
+    background-position:right 50%;
+  }
+  @media (max-width: 760px){
+    .reset-art-break{height:150px;}
+    .reset-art-break.flora{background-size:860px auto; background-position:right bottom;}
+    .reset-art-break.jelly{background-size:820px auto; background-position:left top;}
+    .reset-art-break.give{background-size:820px auto; background-position:right center;}
+    .reset-art-break.lobster{background-size:820px auto; background-position:right center;}
+  }
+</style>
+<link href="assets/asset_06_b9dbc36ad844.png" rel="icon" type="image/png"/>
+<link href="assets/asset_06_b9dbc36ad844.png" rel="shortcut icon" type="image/png"/>
+<link href="assets/asset_06_b9dbc36ad844.png" rel="apple-touch-icon"/>
+<style>
+/* ===== RESET shared refinements ===== */
+.journey-legend{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px 34px;
+  align-items:center;
+  margin:22px 0 8px 0;
+  padding:0;
+}
+.journey-legend-item{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  color:var(--headline);
+  font-size:15px;
+  letter-spacing:.04em;
+  font-weight:500;
+}
+.journey-legend-dot{
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  flex:0 0 22px;
+  display:inline-block;
+}
+.journey-legend-dot.in-person{
+  background:var(--red);
+  border:2px solid var(--red);
+}
+.journey-legend-dot.online{
+  background:var(--white);
+  border:2px solid var(--headline);
+}
+.bottom-cta{
+  background:var(--pale) !important;
+}
+.background a.progressio-link{
+  display:inline-flex;
+  align-items:center;
+  text-decoration:none;
+}
+.background a.progressio-link img{
+  display:block;
+}
+.background p a.progressio-text-link{
+  color:inherit;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+@media (max-width:700px){
+  .journey-legend{
+    gap:12px;
+    align-items:flex-start;
+  }
+  .journey-legend-item{
+    width:100%;
+    font-size:14px;
+  }
+}
+</style><style>
+/* ===== Latest RESET refinements ===== */
+
+/* Make RESET substantially larger in both hero sections */
+.hero h1{
+  font-size:clamp(76px, 13vw, 172px) !important;
+  line-height:.82 !important;
+  letter-spacing:-0.025em;
+}
+
+/* Keep the previously requested light-blue bottom CTA */
+.cta{
+  background:var(--pale) !important;
+}
+
+/* Journey: timeline left, key aligned to its top on the right */
+.journey .wrap{
+  display:grid;
+  grid-template-columns:minmax(0, 1fr) minmax(300px, 390px);
+  column-gap:48px;
+  align-items:start;
+}
+.journey .section-head{
+  grid-column:1 / -1;
+}
+.journey .timeline{
+  grid-column:1;
+  grid-row:2;
+  margin-top:36px;
+}
+.journey .journey-legend{
+  grid-column:2;
+  grid-row:2;
+  margin:36px 0 0 auto !important;
+  padding:0 !important;
+  display:flex !important;
+  flex-direction:column;
+  align-items:flex-start !important;
+  gap:12px !important;
+  width:max-content;
+  max-width:100%;
+}
+.journey .journey-legend-item{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  width:auto !important;
+  font-size:15px;
+  line-height:1.35;
+}
+.journey .journey-legend-dot{
+  width:22px;
+  height:22px;
+  flex:0 0 22px;
+}
+
+@media (max-width:860px){
+  .hero h1{
+    font-size:clamp(72px, 20vw, 118px) !important;
+    line-height:.86 !important;
+  }
+  .journey .wrap{
+    display:block;
+  }
+  .journey .journey-legend{
+    margin:22px 0 22px 0 !important;
+    width:100%;
+  }
+  .journey .timeline{
+    margin-top:24px;
+  }
+}
+
+/* Candidate-only: compact nomination CTA */
+.cta{
+  padding:58px 0 !important;
+}
+.cta .eyebrow{
+  margin-bottom:8px !important;
+}
+.cta h2{
+  margin-bottom:12px !important;
+}
+.cta p{
+  margin-bottom:24px !important;
+}
+.cta .switch{
+  margin-top:18px !important;
+}
+@media (max-width:860px){
+  .cta{
+    padding:44px 0 !important;
+  }
+}
+</style><style>
+/* ===== Latest requested refinements ===== */
+
+/* Hero: move the left content slightly lower */
+.hero .wrap{
+  padding-top:18px !important;
+}
+
+/* Keep nomination-only CTA compact and WHITE */
+.cta{
+  background:var(--white) !important;
+  padding:48px 0 !important;
+}
+.cta .eyebrow{
+  margin-bottom:8px !important;
+}
+.cta h2{
+  margin-bottom:10px !important;
+}
+.cta p{
+  margin-bottom:22px !important;
+}
+.cta .switch{
+  margin-top:16px !important;
+}
+
+/* Keep the final CTA light blue */
+.bottom-cta{
+  background:var(--pale) !important;
+}
+
+/* Expanded collaboration section */
+.background{
+  background:var(--white) !important;
+  border-top:1px solid var(--line);
+  padding:72px 0 !important;
+}
+.background .collaboration-inner{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:34px;
+}
+.background .background-logos{
+  display:flex;
+  align-items:center;
+  gap:36px;
+  flex-wrap:wrap;
+}
+.background .background-logos img{
+  height:48px;
+  width:auto;
+  display:block;
+}
+.background .collaboration-intro{
+  max-width:860px;
+}
+.background .collaboration-intro h2{
+  font-size:clamp(34px,5vw,56px);
+  font-weight:900;
+  line-height:.98;
+  max-width:19ch;
+  margin:0 0 18px;
+}
+.background .collaboration-intro p{
+  max-width:76ch;
+  margin:0;
+  font-size:17px;
+  line-height:1.65;
+  opacity:.9;
+}
+.background .collaboration-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:24px;
+}
+.background .collaboration-card{
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:28px;
+  background:var(--white);
+}
+.background .collaboration-card h3{
+  font-family:'Barlow Condensed',sans-serif;
+  text-transform:uppercase;
+  color:var(--headline);
+  font-size:25px;
+  margin:0 0 14px;
+  letter-spacing:.01em;
+}
+.background .collaboration-card p{
+  margin:0 0 13px;
+  max-width:none;
+  font-size:15px;
+  line-height:1.6;
+  opacity:.88;
+}
+.background .collaboration-card p:last-child{
+  margin-bottom:0;
+}
+.background .collaboration-card a{
+  color:inherit;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+
+/* Do not allow a background visual in the tension sections */
+.tension{
+  background-image:none !important;
+}
+.tension::before,
+.tension::after{
+  content:none !important;
+  display:none !important;
+  background-image:none !important;
+}
+
+@media (max-width:860px){
+  .hero .wrap{
+    padding-top:10px !important;
+  }
+  .cta{
+    padding:40px 0 !important;
+  }
+  .background{
+    padding:56px 0 !important;
+  }
+  .background .collaboration-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+/* Candidate hero artwork: larger, while contained within the hero */
+.hero .wing{
+  height:min(94%, 485px) !important;
+  max-width:52vw !important;
+  object-fit:contain !important;
+  object-position:right bottom !important;
+}
+
+/* Candidate "Who this is for": remove the tall separator and integrate jellyfish on the left */
+.who{
+  position:relative;
+  overflow:hidden;
+  padding:50px 0 78px !important;
+}
+.who .who-jelly-art{
+  position:absolute;
+  left:0;
+  top:36px;
+  width:175px;
+  height:245px;
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:left top;
+  pointer-events:none;
+  z-index:0;
+}
+.who .wrap{
+  position:relative;
+  z-index:1;
+  padding-left:205px !important;
+}
+.who .section-head{
+  margin-bottom:30px !important;
+}
+
+@media (max-width:980px){
+  .hero .wing{
+    height:min(88%, 440px) !important;
+    max-width:46vw !important;
+  }
+  .who{
+    padding:44px 0 66px !important;
+  }
+  .who .who-jelly-art{
+    width:130px;
+    height:185px;
+    top:34px;
+  }
+  .who .wrap{
+    padding-left:160px !important;
+  }
+}
+@media (max-width:760px){
+  .hero .wing{
+    display:none !important;
+  }
+  .who .who-jelly-art{
+    position:relative;
+    width:120px;
+    height:120px;
+    top:auto;
+    left:auto;
+    margin:0 0 4px 20px;
+  }
+  .who .wrap{
+    padding-left:20px !important;
+  }
+}
+</style><style>
+/* ===== RESET contact modal ===== */
+.reset-contact-modal{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  background:rgba(11,43,140,.28);
+  backdrop-filter:blur(4px);
+}
+.reset-contact-modal.is-open{display:flex;}
+.reset-contact-dialog{
+  position:relative;
+  width:min(680px,100%);
+  max-height:min(90vh,820px);
+  overflow:auto;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:34px;
+  box-shadow:0 24px 80px rgba(11,43,140,.22);
+}
+.reset-contact-close{
+  position:absolute;
+  top:14px;
+  right:16px;
+  width:40px;
+  height:40px;
+  border:0;
+  background:transparent;
+  color:var(--headline);
+  font-size:32px;
+  line-height:1;
+  cursor:pointer;
+}
+.reset-contact-eyebrow{
+  margin:0 0 8px;
+  color:var(--red);
+  font-family:'Barlow Condensed',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-weight:800;
+  font-size:14px;
+}
+.reset-contact-dialog h2{
+  margin:0 0 10px;
+  font-size:clamp(34px,6vw,54px);
+  line-height:.95;
+}
+.reset-contact-note{
+  margin:0 0 26px;
+  max-width:55ch;
+  color:var(--ink);
+  opacity:.82;
+}
+.reset-contact-form{
+  display:grid;
+  gap:18px;
+}
+.reset-contact-field{
+  display:grid;
+  gap:8px;
+}
+.reset-contact-field > label,
+.reset-contact-legend{
+  font-weight:700;
+  color:var(--ink);
+  font-size:15px;
+}
+.reset-contact-form input[type="text"],
+.reset-contact-form input[type="email"],
+.reset-contact-form textarea{
+  width:100%;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:var(--pale);
+  color:var(--ink);
+  padding:14px 16px;
+  font:inherit;
+  outline:none;
+}
+.reset-contact-form textarea{
+  min-height:130px;
+  resize:vertical;
+}
+.reset-contact-form input:focus,
+.reset-contact-form textarea:focus{
+  border-color:var(--headline);
+  box-shadow:0 0 0 3px rgba(23,69,224,.10);
+}
+.reset-contact-choice{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  border:0;
+  padding:0;
+  margin:0;
+}
+.reset-contact-choice label{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:11px 15px;
+  background:var(--pale);
+  cursor:pointer;
+}
+.reset-contact-choice input{
+  accent-color:var(--headline);
+}
+.reset-contact-submit{
+  justify-self:start;
+  border:0;
+  cursor:pointer;
+}
+.reset-contact-helper{
+  margin:-4px 0 0;
+  font-size:13px;
+  opacity:.66;
+}
+@media(max-width:620px){
+  .reset-contact-dialog{
+    padding:28px 20px 24px;
+    border-radius:18px;
+  }
+  .reset-contact-choice{
+    flex-direction:column;
+  }
+  .reset-contact-choice label{
+    border-radius:14px;
+  }
+}
+</style><style>
+/* ===== Strong compact treatment for BY NOMINATION ONLY ===== */
+.cta{
+  background:#ffffff !important;
+  padding:26px 0 24px !important;
+  min-height:0 !important;
+}
+.cta .wrap{
+  padding-top:0 !important;
+  padding-bottom:0 !important;
+}
+.cta .eyebrow{
+  margin:0 0 4px !important;
+  line-height:1.1 !important;
+}
+.cta h2{
+  margin:0 0 6px !important;
+  line-height:.95 !important;
+}
+.cta p{
+  margin:0 0 10px !important;
+  line-height:1.35 !important;
+  max-width:60ch !important;
+}
+.cta .switch,
+.cta .btn,
+.cta .cta-actions{
+  margin-top:8px !important;
+  margin-bottom:0 !important;
+}
+.cta .switch{
+  padding:0 !important;
+}
+.cta br{
+  line-height:.5 !important;
+}
+
+@media (max-width:760px){
+  .cta{
+    padding:22px 0 20px !important;
+  }
+  .cta h2{
+    margin-bottom:5px !important;
+  }
+  .cta p{
+    margin-bottom:9px !important;
+  }
+}
+</style><style>
+/* ===== Candidate: BY NOMINATION ONLY centered and better spaced ===== */
+.cta{
+  background:#ffffff !important;
+  padding:32px 0 30px !important;
+  min-height:0 !important;
+  text-align:center !important;
+}
+.cta .wrap{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+  padding-top:0 !important;
+  padding-bottom:0 !important;
+}
+.cta .eyebrow{
+  justify-content:center !important;
+  text-align:center !important;
+  margin:0 0 10px !important;
+}
+.cta h2{
+  text-align:center !important;
+  margin:0 0 18px !important;
+  max-width:15ch !important;
+}
+.cta p{
+  text-align:center !important;
+  margin:0 0 24px !important;
+  max-width:62ch !important;
+  line-height:1.45 !important;
+}
+.cta .btn{
+  margin:0 0 18px !important;
+}
+.cta .switch{
+  margin:0 !important;
+  text-align:center !important;
+  width:100% !important;
+}
+.cta .switch a{
+  display:inline !important;
+}
+
+@media (max-width:760px){
+  .cta{
+    padding:28px 0 26px !important;
+  }
+  .cta h2{
+    margin-bottom:16px !important;
+  }
+  .cta p{
+    margin-bottom:20px !important;
+  }
+  .cta .btn{
+    margin-bottom:16px !important;
+  }
+}
+</style><style>
+/* ===== Man + plant artwork on timeline ===== */
+.journey .wrap{
+  position:relative !important;
+}
+.journey-man-plant{
+  position:absolute;
+  right:18px;
+  bottom:34px;
+  width:330px;
+  height:470px;
+  overflow:hidden;
+  pointer-events:none;
+  z-index:0;
+}
+.journey-man-plant img{
+  position:absolute;
+  width:1250px;
+  max-width:none !important;
+  height:auto;
+  left:-48px;
+  bottom:0;
+  display:block;
+}
+.journey .section-head,
+.journey .timeline,
+.journey .journey-legend{
+  position:relative;
+  z-index:2;
+}
+
+/* Preserve a clean right-side area for the artwork on desktop */
+@media (min-width:861px){
+  .journey .timeline{
+    padding-right:12px;
+  }
+}
+@media (max-width:1050px){
+  .journey-man-plant{
+    width:260px;
+    height:380px;
+    right:4px;
+    bottom:26px;
+  }
+  .journey-man-plant img{
+    width:1010px;
+    left:-46px;
+  }
+}
+@media (max-width:860px){
+  .journey-man-plant{
+    display:none;
+  }
+}
+</style><style>
+/* ===== Jellyfish: show the artwork at its original object size ===== */
+.who{
+  position:relative !important;
+  overflow:hidden !important;
+  background:#ffffff !important;
+}
+
+/* This frame crops the large transparent source canvas around the actual jellyfish.
+   The source itself is not scaled on large screens, so the jellyfish keeps its original size. */
+.who .who-jelly-art{
+  position:absolute !important;
+  left:max(18px, calc(50% - 900px)) !important;
+  top:34px !important;
+  width:350px !important;
+  height:440px !important;
+  overflow:hidden !important;
+  background:none !important;
+  pointer-events:none !important;
+  z-index:0 !important;
+}
+
+.who .who-jelly-art img{
+  position:absolute !important;
+  width:1920px !important;
+  height:1080px !important;
+  max-width:none !important;
+  left:-67px !important;
+  top:-87px !important;
+  display:block !important;
+}
+
+/* Keep the content safely above the artwork */
+.who .who-grid{
+  position:relative !important;
+  z-index:1 !important;
+}
+
+/* On medium desktop widths, shift the content right so the original-size jellyfish never overlaps it */
+@media (max-width:1600px) and (min-width:981px){
+  .who .who-grid{
+    padding-left:205px !important;
+  }
+}
+
+/* Scale the artwork only when the viewport becomes too narrow to preserve the desktop size */
+@media (max-width:980px){
+  .who .who-jelly-art{
+    width:230px !important;
+    height:300px !important;
+    left:8px !important;
+    top:34px !important;
+  }
+  .who .who-jelly-art img{
+    width:1344px !important;
+    height:756px !important;
+    left:-47px !important;
+    top:-61px !important;
+  }
+  .who .who-grid{
+    padding-left:160px !important;
+  }
+}
+
+@media (max-width:760px){
+  .who .who-jelly-art{
+    position:relative !important;
+    width:160px !important;
+    height:190px !important;
+    left:auto !important;
+    top:auto !important;
+    margin:0 0 4px 18px !important;
+  }
+  .who .who-jelly-art img{
+    width:864px !important;
+    height:486px !important;
+    left:-30px !important;
+    top:-39px !important;
+  }
+  .who .who-grid{
+    padding-left:0 !important;
+  }
+}
+</style><style>
+/* ===== Hero CTA row + brochure button ===== */
+.hero-actions{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:24px;
+}
+.hero-actions .hero-btn{
+  margin-top:0 !important;
+  margin-bottom:0 !important;
+}
+.hero-actions .hero-brochure-btn{
+  margin:0 !important;
+  background:#ffffff;
+  color:var(--headline);
+  border-color:var(--headline);
+}
+.hero-actions .hero-brochure-btn:hover{
+  background:var(--headline);
+  color:#ffffff;
+  border-color:var(--headline);
+}
+@media(max-width:620px){
+  .hero-actions{
+    gap:10px;
+  }
+  .hero-actions .btn{
+    width:100%;
+    text-align:center;
+  }
+}
+</style><style>
+/* ===== Hero brochure button: match primary red CTA ===== */
+.hero-actions .hero-brochure-btn{
+  background:var(--red) !important;
+  color:#ffffff !important;
+  border-color:var(--red) !important;
+}
+.hero-actions .hero-brochure-btn:hover{
+  background:#e83b2c !important;
+  color:#ffffff !important;
+  border-color:#e83b2c !important;
+}
+</style><style>
+/* ===== Slightly larger navigation ===== */
+.topnav-inner{
+  padding:16px 32px !important;
+}
+.topnav-logo img{
+  height:62px !important;
+  width:auto !important;
+}
+.topnav-links{
+  gap:30px !important;
+}
+.topnav-links a{
+  font-size:14.5px !important;
+}
+.topnav-btn{
+  padding:9px 21px !important;
+}
+
+@media(max-width:900px){
+  .topnav-inner{
+    padding:14px 20px !important;
+  }
+  .topnav-logo img{
+    height:58px !important;
+  }
+  .topnav-links{
+    gap:20px !important;
+  }
+  .topnav-links a{
+    font-size:14px !important;
+  }
+}
+
+@media(max-width:620px){
+  .topnav-inner{
+    padding:12px 18px !important;
+  }
+  .topnav-logo img{
+    height:54px !important;
+  }
+  .topnav-links{
+    gap:14px !important;
+  }
+  .topnav-links a{
+    font-size:13.5px !important;
+  }
+}
+</style><style>
+/* ===== Hero brochure button: outlined red ===== */
+.hero-actions .hero-brochure-btn{
+  background:transparent !important;
+  color:var(--red) !important;
+  border:2px solid var(--red) !important;
+}
+.hero-actions .hero-brochure-btn:hover{
+  background:var(--red) !important;
+  color:#ffffff !important;
+  border-color:var(--red) !important;
+}
+</style><style>
+/* ===== Artwork in BY NOMINATION ONLY ===== */
+.cta{
+  position:relative !important;
+  overflow:hidden !important;
+}
+.cta .wrap{
+  position:relative !important;
+  z-index:2 !important;
+}
+
+/* Artwork sits in a dedicated left gutter so it never crosses text */
+.cta-insect-art{
+  position:absolute;
+  z-index:1;
+  left:max(18px, calc(50% - 560px));
+  top:50%;
+  transform:translateY(-50%);
+  width:185px;
+  height:88%;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  pointer-events:none;
+}
+.cta-insect-art img{
+  display:block;
+  width:auto;
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+}
+
+/* Reserve space for the artwork while keeping the CTA content centered */
+@media (min-width:861px){
+  .cta .wrap{
+    padding-left:225px !important;
+    padding-right:65px !important;
+  }
+}
+@media (max-width:860px){
+  .cta-insect-art{
+    left:14px;
+    width:125px;
+    height:76%;
+  }
+  .cta .wrap{
+    padding-left:150px !important;
+    padding-right:20px !important;
+  }
+}
+@media (max-width:620px){
+  .cta-insect-art{
+    position:relative;
+    left:auto;
+    top:auto;
+    transform:none;
+    width:105px;
+    height:135px;
+    margin:0 0 8px 18px;
+  }
+  .cta .wrap{
+    padding-left:20px !important;
+    padding-right:20px !important;
+  }
+}
+</style><style>
+/* ===== BY NOMINATION ONLY: artwork fills the full section height ===== */
+.cta{
+  position:relative !important;
+  overflow:hidden !important;
+}
+
+/* Full-height artwork panel on the left */
+.cta-insect-art{
+  position:absolute !important;
+  left:0 !important;
+  top:0 !important;
+  bottom:0 !important;
+  width:31% !important;
+  height:100% !important;
+  transform:none !important;
+  margin:0 !important;
+  display:block !important;
+  overflow:hidden !important;
+  pointer-events:none !important;
+  z-index:1 !important;
+}
+
+.cta-insect-art img{
+  position:absolute !important;
+  left:0 !important;
+  top:0 !important;
+  width:100% !important;
+  height:100% !important;
+  max-width:none !important;
+  max-height:none !important;
+  object-fit:cover !important;
+  object-position:left center !important;
+}
+
+/* Keep all CTA copy/buttons clear of the artwork */
+.cta .wrap{
+  position:relative !important;
+  z-index:2 !important;
+  width:100% !important;
+  padding-left:34% !important;
+  padding-right:4% !important;
+  box-sizing:border-box !important;
+}
+
+/* Keep centered alignment within the available text area */
+.cta .wrap,
+.cta .eyebrow,
+.cta h2,
+.cta p,
+.cta .switch{
+  text-align:center !important;
+}
+.cta .eyebrow{
+  justify-content:center !important;
+}
+
+@media (max-width:980px){
+  .cta-insect-art{
+    width:28% !important;
+  }
+  .cta .wrap{
+    padding-left:31% !important;
+    padding-right:3% !important;
+  }
+}
+
+@media (max-width:700px){
+  /* On mobile the artwork still fills the section vertically,
+     but uses a narrower strip so it never crosses the text. */
+  .cta-insect-art{
+    width:23% !important;
+  }
+  .cta .wrap{
+    padding-left:26% !important;
+    padding-right:16px !important;
+  }
+}
+
+@media (max-width:480px){
+  .cta-insect-art{
+    width:20% !important;
+  }
+  .cta .wrap{
+    padding-left:23% !important;
+    padding-right:12px !important;
+  }
+}
+</style><style>
+/* ===== CTA artwork: fill section height without cropping the insect ===== */
+.cta{
+  position:relative !important;
+  overflow:hidden !important;
+}
+
+.cta-insect-art{
+  position:absolute !important;
+  left:0 !important;
+  top:0 !important;
+  bottom:0 !important;
+  width:31% !important;
+  height:100% !important;
+  transform:none !important;
+  margin:0 !important;
+  overflow:hidden !important;
+  pointer-events:none !important;
+  z-index:1 !important;
+}
+
+/* The artwork fills the FULL section height.
+   Width stays proportional, so the insect is never cut off. */
+.cta-insect-art img{
+  position:absolute !important;
+  left:0 !important;
+  top:0 !important;
+  height:100% !important;
+  width:auto !important;
+  max-width:none !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  object-position:left center !important;
+  display:block !important;
+}
+
+/* Keep all content completely clear of the artwork */
+.cta .wrap{
+  position:relative !important;
+  z-index:2 !important;
+  padding-left:34% !important;
+  padding-right:4% !important;
+}
+
+@media(max-width:980px){
+  .cta-insect-art{
+    width:28% !important;
+  }
+  .cta .wrap{
+    padding-left:31% !important;
+    padding-right:3% !important;
+  }
+}
+
+@media(max-width:700px){
+  .cta-insect-art{
+    width:24% !important;
+  }
+  .cta .wrap{
+    padding-left:27% !important;
+    padding-right:14px !important;
+  }
+}
+
+@media(max-width:480px){
+  .cta-insect-art{
+    width:21% !important;
+  }
+  .cta .wrap{
+    padding-left:24% !important;
+    padding-right:12px !important;
+  }
+}
+</style></head>
+<body>
+<nav class="topnav">
+<div class="wrap topnav-inner">
+<a class="topnav-logo" href="https://www.pontsbschool.com">
+<img alt="École des Ponts Business School" src="assets/asset_07_91010053a2a5.png"/>
+</a>
+<div class="topnav-links">
+<a class="topnav-btn" href="https://www.pontsbschool.com/corporate/reset">Program page</a>
+</div>
+</div>
+</nav>
+<!-- HERO -->
+<section class="hero">
+<img alt="" class="wing" src="assets/asset_08_3ac52cbce046.png"/>
+<div class="wrap">
+<span class="tag-year">Cohort 2027 · Candidates</span>
+<h1>RESET</h1>
+<p class="hero-sub"><span>An accelerator for leaders who want to build a new economy</span><span>and are ready to be nominated.</span></p><div class="hero-actions"><a class="btn hero-btn js-open-candidate-flow" href="#nomination-request-form">Apply now</a><a aria-label="Download RESET brochure (PDF)" class="btn hero-btn hero-brochure-btn" href="https://form.jotform.com/262354842912055" rel="noopener" target="_blank">Download brochure</a></div>
+</div>
+</section>
+<!-- TENSION -->
+<section class="tension">
+<div class="wrap grid">
+<div>
+<div class="eyebrow">Something is missing</div>
+<h2>You have the title, the salary, the career and it just doesn’t feel right!</h2>
+<p class="lede">The systems we've built are becoming brittle economically, ecologically, and socially. You feel the gap widening between where the world is heading and the future you actually want to help build. You're not ready to give up. You just need the space, the tools, and the people to make it real.</p>
+<div class="callout">This feeling is the beginning.</div>
+</div>
+<div class="panel">
+<ul>
+<li>A 7-month journey to see the systems shaping our world clearly.</li>
+<li>A community of leaders already rewriting the rules.</li>
+<li>Guidance from experts, practitioners, and a personal mentor.</li>
+<li>Not a manual, but a mirror and peers willing to look into theirs too.</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- HOW IT WORKS -->
+<section class="how">
+<div class="wrap">
+<div class="section-head" style="margin-bottom:32px;">
+<div class="eyebrow">How it works</div>
+<h2>A 7-month hybrid journey, built around presence and integrity</h2>
+</div>
+<p class="lede" style="max-width:70ch;">Two 5-day in-person gatherings in Paris anchor the program: one to set the stage and one to close it. In between, the cohort meets online twice a month, three hours at a time, to dive deep into one of six transversal and entangled themes shaping the world. A personal mentor plus a peer coaching group walk with you throughout and beyond the program, not just during the seven months.</p>
+<div class="how-stats">
+<div><b>7</b><span>Months</span></div>
+<div><b>2</b><span>In-person gatherings</span></div>
+<div><b>6</b><span>Themes</span></div>
+<div><b>3</b><span>Champions of Impact conferences</span></div>
+<div><b>25</b><span>Cohort size</span></div>
+</div>
+</div>
+</section>
+<!-- PILLARS -->
+<section class="pillars">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">What RESET stands for</div>
+<h2>Five ideas define the core of the program</h2>
+</div>
+<div class="pillar-grid">
+<div class="pillar"><h3>Regeneration</h3><p>Rebuilding rather than just sustaining, with strategies that replenish natural, social, and economic systems.</p></div>
+<div class="pillar"><h3>Entrepreneurship</h3><p>Driving active, creative agency, turning systemic insight into tangible, thriving ventures.</p></div>
+<div class="pillar"><h3>Systems</h3><p>Mapping complexity, seeing the interconnected dynamics behind isolated symptoms.</p></div>
+<div class="pillar"><h3>Ethics</h3><p>Refusing easy compromises – bringing courage and responsibility into executive decisions.</p></div>
+<div class="pillar"><h3>Trust</h3><p>Rebuilding the relational glue through psychological safety, peer accountability, and transparent alliances.</p></div>
+</div>
+</div>
+</section>
+<!-- WHO -->
+<section class="who"><div aria-hidden="true" class="who-jelly-art reset-art-break jelly"><img alt="" src="assets/asset_03_593ac3c55541.png"/></div>
+<div class="wrap who-grid">
+<div>
+<div class="section-head" style="margin-bottom:36px;">
+<div class="eyebrow">Who this is for</div>
+<h2>Four kinds of leaders find their way here</h2>
+</div>
+<div class="who-item">
+<div class="num">01</div>
+<div><h3>Leaders with a voice inside them</h3><p>You're in business, government, civil society, or your own venture, and you feel the growing gap between the system you operate in and the leader you want to be.</p></div>
+</div>
+<div class="who-item">
+<div class="num">02</div>
+<div><h3>People who want to act</h3><p>You're ready to move past analysis and good intentions, and you need guidance on where to start.</p></div>
+</div>
+<div class="who-item">
+<div class="num">03</div>
+<div><h3>Builders of a different future</h3><p>You believe current systems are falling short, and you're looking for peers ready to act with integrity.</p></div>
+</div>
+<div class="who-item">
+<div class="num">04</div>
+<div><h3>Seekers of depth and connection</h3><p>You're not after another certificate or networking event; you want a real shift in how you think, lead, and show up.</p></div>
+</div>
+</div>
+<div class="criteria">
+<h4>Eligibility</h4>
+<ul>
+<li>Bachelor's degree or above</li>
+<li>Between 30–40 years old</li>
+<li>In a decision-making position</li>
+<li>A clear, personal motivation</li>
+<li>The courage to sit in discomfort</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- TRANSFORM -->
+<section class="transform">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">How it will change you</div>
+<h2>From the inside out and from the outside in</h2>
+</div>
+<div class="transform-grid">
+<div class="transform-card">
+<div class="eyebrow" style="color:var(--headline);">Inside out</div>
+<h3>Know who you are as a leader</h3>
+<p>Not a role, not a title, but a grounded sense of your own values, voice, and the leader you're choosing to become.</p>
+<h3>Gain clarity, see the systems clearly</h3>
+<p>Understand the economic, ecological, and political forces you've been living inside, and know where you can move them.</p>
+<h3>Develop the courage to act</h3>
+<p>Not just intention, but the tools, resilience, and community to move to real action, even when it's uncomfortable.</p>
+</div>
+<div class="transform-card">
+<div class="eyebrow" style="color:var(--headline);">Outside in</div>
+<h3>See through the systems you know</h3>
+<p>Expert-led sessions and open discussion challenge the assumptions underneath what you already understand.</p>
+<h3>Be challenged, not just supported</h3>
+<p>An experienced guide accompanies you throughout, someone who holds you accountable and walks the path with you.</p>
+<h3>Join a greater community</h3>
+<p>Small islands of coherence can shift an entire system to a higher order. This is your island.</p>
+</div>
+<div class="quote">"Hope is often misunderstood. People tend to think that it is simply passive wishful thinking... This is indeed the opposite of real hope, which requires action and engagement." <span>Jane Goodall</span></div>
+</div>
+</div>
+</section>
+<!-- JOURNEY -->
+<section class="journey">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Your journey, 2027</div>
+<h2>A 7-month hybrid journey, built around presence and integrity</h2>
+</div>
+<div aria-label="Journey format legend" class="journey-legend"><div class="journey-legend-item"><span aria-hidden="true" class="journey-legend-dot in-person"></span><span>In-person: Presence Gatherings</span></div><div class="journey-legend-item"><span aria-hidden="true" class="journey-legend-dot online"></span><span>Online sessions on Tuesdays &amp; Thursdays at 17:00</span></div></div><div class="timeline">
+<div class="t-line"></div>
+<div class="t-item milestone">
+<span class="t-dot"></span>
+<div class="t-content">
+<div class="when">April</div>
+<h3>Kick off: Making Waves</h3>
+<div class="dates">Paris + ChangeNow · Fri 23 – Fri 30</div>
+</div>
+</div>
+<div class="t-item">
+<span class="t-dot"></span>
+<div class="t-content">
+<div class="when">May</div>
+<h3>Natural Systems</h3>
+<div class="dates">Tue 18 + Thu 20</div>
+</div>
+</div>
+<div class="t-item">
+<span class="t-dot"></span>
+<div class="t-content">
+<div class="when">June</div>
+<h3>Technology</h3>
+<div class="dates">Tue 15 + Thu 18</div>
+</div>
+</div>
+<div class="t-item">
+<span class="t-dot"></span>
+<div class="t-content">
+<div class="when">July</div>
+<h3>Leadership &amp; Governance</h3>
+<div class="dates">Tue 27 + Thu 29</div>
+</div>
+</div>
+<div class="t-item">
+<span class="t-dot"></span>
+<div class="t-content">
+<div class="when">August / September</div>
+<h3>Finance &amp; Financial Systems</h3>
+<div class="dates">Tue 31 + Thu 02</div>
+</div>
+</div>
+<div class="t-item">
+<span class="t-dot"></span>
+<div class="t-content">
+<div class="when">September</div>
+<h3>Trade &amp; Exchange</h3>
+<div class="dates">Tue 28 + Thu 30</div>
+</div>
+</div>
+<div class="t-item">
+<span class="t-dot"></span>
+<div class="t-content">
+<div class="when">October</div>
+<h3>Regulation &amp; Government</h3>
+<div class="dates">Tue 12 + Thu 14</div>
+</div>
+</div>
+<div class="t-item milestone">
+<span class="t-dot"></span>
+<div class="t-content">
+<div class="when">November</div>
+<h3>Closing &amp; Graduation</h3>
+<div class="dates">Paris · Mon 11 – Sat 20</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="journey-man-plant"><img alt="" src="assets/asset_09_8e08b19b7db6.png"/></div></div>
+</section>
+<!-- THEMES -->
+<section class="themes">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Thematic sessions: going deeper</div>
+<h2>Six systems shaping the world, and how they are inextricably linked</h2>
+</div>
+<div class="theme-grid">
+<div class="theme"><div class="idx">01</div><h3>Natural Systems</h3><p>Leading within planetary boundaries rather than against them.</p></div>
+<div class="theme"><div class="idx">02</div><h3>Technology</h3><p>Where power, work, and human connection are being reshaped, and where leaders draw the line.</p></div>
+<div class="theme"><div class="idx">03</div><h3>Leadership &amp; Governance</h3><p>Leading when trust is fracturing and old models are failing.</p></div>
+<div class="theme"><div class="idx">04</div><h3>Finance &amp; Financial Systems</h3><p>Who creates value, who captures it, and how money is redirected.</p></div>
+<div class="theme"><div class="idx">05</div><h3>Trade &amp; Exchange</h3><p>The human, ecological, and political cost behind supply chains and markets.</p></div>
+<div class="theme"><div class="idx">06</div><h3>Regulation &amp; Government</h3><p>Where policy, public power, and citizens can intervene.</p></div>
+</div>
+</div>
+</section>
+<!-- WHY -->
+<section class="why">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Why RESET, and not another program</div>
+<h2>Four commitments that set us apart</h2>
+</div>
+<div class="why-grid">
+<div class="why-item"><h3>We don't teach you about problems</h3><p>We ask you to sit with them, to understand, feel, and let a problem change how you think, rather than just hand you a framework.</p></div>
+<div class="why-item"><h3>We use multiple lenses, not one</h3><p>Business, political, psychology, ethics, ecology, economics: real change needs more than one way of seeing.</p></div>
+<div class="why-item"><h3>You learn from people, not just experts</h3><p>Inspiring professionals, indigenous communities, and local changemakers whose way of seeing the world will challenge what you thought you knew.</p></div>
+<div class="why-item"><h3>You're mentored during and after</h3><p>Every participant is guided throughout the program and supported beyond it, because your pledge is only the beginning.</p></div>
+</div>
+</div>
+</section>
+<!-- MENTORS & FACULTY -->
+<section class="mentors-section" id="mentors">
+<div class="wrap">
+<div class="mentors-head">
+<div>
+<div class="eyebrow">Our force</div>
+<h2>Meet some of the mentors &amp; faculty</h2>
+</div>
+<p class="lede">Throughout the RESET journey, participants learn alongside a global group of practitioners, investors, authors, sustainability leaders and systems thinkers who bring lived experience into the program.</p>
+</div>
+<div class="mentors-grid">
+<article class="mentor-card">
+<h3>Marcel Fukayama</h3>
+<p class="mentor-role">Movement Builder Towards a Positive Impact Economy</p>
+<p class="mentor-location">São Paulo, Brazil</p>
+</article>
+<article class="mentor-card">
+<h3>Fokko Wientjes</h3>
+<p class="mentor-role">Sustainability Strategist</p>
+<p class="mentor-location">Geneva, Switzerland</p>
+</article>
+<article class="mentor-card">
+<h3>Andrew Kuper</h3>
+<p class="mentor-role">Investor, Entrepreneur and Author</p>
+<p class="mentor-location">Sydney, Australia</p>
+</article>
+<article class="mentor-card">
+<h3>Jacqueline Novogratz</h3>
+<p class="mentor-role">Author of “The Blue Sweater” and “Manifesto for a Moral Revolution.”</p>
+<p class="mentor-location">New York, United States</p>
+</article>
+<article class="mentor-card">
+<h3>Daniela Barone Soares</h3>
+<p class="mentor-role">Creator of an impact investing powerhouse</p>
+<p class="mentor-location">United Kingdom</p>
+</article>
+<article class="mentor-card">
+<h3>Mafalda Duarte</h3>
+<p class="mentor-role">Executive Director of the Green Climate Fund</p>
+<p class="mentor-location">Seoul, Korea</p>
+</article>
+<article class="mentor-card">
+<h3>Bayo Akomolafe</h3>
+<p class="mentor-role">Author &amp; Hubert Humphrey Distinguished Professor</p>
+<p class="mentor-location">India</p>
+</article>
+<article class="mentor-card">
+<h3>Helmy Abouleish</h3>
+<p class="mentor-role">President Biodynamic Federation Demeter International</p>
+<p class="mentor-location">Cairo, Egypt</p>
+</article>
+</div>
+</div>
+</section>
+<!-- PRICING -->
+<section class="pricing">
+<div class="wrap">
+<div class="eyebrow" style="color:var(--red);">Practical info &amp; pricing</div>
+<h2 style="font-size:clamp(32px,4.5vw,48px); font-weight:800;">Start program 23 April 2027</h2>
+<div class="price-grid">
+<div class="price-card">
+<div class="label">Tuition</div>
+<div class="value amount">€15,000</div>
+<p>Exclusive of travel and living expenses.</p>
+</div>
+<div class="price-card">
+<div class="label">Groups, SMEs &amp; entrepreneurs</div>
+<div class="value amount">€12,000</div>
+<p>Group rate, minimum 2 applicants per organization.</p>
+</div>
+<div class="price-card">
+<div class="label">Application deadline</div>
+<div class="value">15 March 2027</div>
+<p>Cohort size limited to 25 leaders.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<section class="cta"><div aria-hidden="true" class="cta-insect-art"><img alt="" src="assets/asset_10_678f2a985b59.png"/></div>
+<div class="wrap">
+<div class="eyebrow" style="justify-content:center;">By nomination only</div>
+<h2>The only leadership program you cannot apply to.</h2>
+<p>If you feel called to RESET, reach out, or ask someone who knows your work to put your name forward.</p>
+<a class="btn js-open-candidate-flow" href="#nomination-request-form">Request a nomination</a>
+<div class="switch">Nominating someone instead? <a href="nominators.html">Go to the nominator's page →</a></div>
+</div>
+</section>
+<!-- CANDIDATE NOMINATION FLOW -->
+<section aria-hidden="true" aria-labelledby="candidate-flow-title" class="candidate-flow" id="nomination-request-form">
+<div aria-modal="true" class="flow-wrap" role="dialog">
+<button aria-label="Close nomination form" class="candidate-flow-close" id="candidateFlowClose" type="button">×</button>
+<div class="candidate-flow-header">
+<div class="eyebrow">Nomination only</div>
+<h2 id="candidate-flow-title">Request your nomination</h2>
+</div>
+<div class="candidate-gate" id="candidateNominationGate">
+<div class="gate-label">Before you continue</div>
+<h3>You cannot apply directly.</h3>
+<p>To be considered for Leadership: RESET, you need someone to nominate you.</p>
+<div class="candidate-gate-note">Already have someone in mind? Continue to the short form and tell us who they are so we can contact them and send them the official nomination form.</div>
+<button class="flow-button" id="flowContinueToForm" type="button">Continue</button>
+</div>
+<form aria-hidden="true" class="candidate-request-form form-hidden" id="candidateNominatorContactForm">
+<fieldset>
+<legend>About you</legend>
+<div class="row2">
+<div class="field">
+<label for="flow-cand-name">Your full name <span class="req">*</span></label>
+<input autocomplete="name" id="flow-cand-name" name="cand-name" required="" type="text"/>
+</div>
+<div class="field">
+<label for="flow-cand-email">Your email <span class="req">*</span></label>
+<input autocomplete="email" id="flow-cand-email" name="cand-email" required="" type="email"/>
+</div>
+</div>
+</fieldset>
+<fieldset>
+<legend>About your nominator</legend>
+<div class="field">
+<label for="flow-nom-name">Nominator's full name <span class="req">*</span></label>
+<input autocomplete="name" id="flow-nom-name" name="nom-name" required="" type="text"/>
+<div class="hint">Enter the full name of the person who has agreed to nominate you.</div>
+</div>
+<div class="field">
+<label for="flow-nom-email">Nominator's email <span class="req">*</span></label>
+<input autocomplete="email" id="flow-nom-email" name="nom-email" required="" type="email"/>
+<div class="hint">We will use this email to contact them about your nomination.</div>
+</div>
+<div class="field">
+<label for="flow-nom-relationship">Your relationship to the nominator <span class="req">*</span></label>
+<input id="flow-nom-relationship" name="nom-relationship" placeholder="e.g. manager, mentor, board member, client, colleague" required="" type="text"/>
+</div>
+<div class="field">
+<label for="flow-why-nominated">Why do you think you should be nominated? <span class="req">*</span></label>
+<textarea data-max-sentences="5" id="flow-why-nominated" maxlength="700" name="why-nominated" placeholder="Tell us briefly why you believe RESET is the right next step for you." required=""></textarea>
+<div class="hint">Maximum 5 short sentences.</div>
+</div>
+</fieldset>
+<fieldset>
+<div class="consent">
+<input id="flow-consent" name="consent" required="" type="checkbox"/>
+<label for="flow-consent">I confirm I have this person's permission to be contacted about nominating me, and I agree that École des Ponts Business School and Progressio Foundation may use the information above to process this request.</label>
+</div>
+</fieldset>
+<div class="submit-row">
+<button class="flow-button" type="submit">Send nomination request</button>
+<div class="status" id="flowStatusMsg"></div>
+</div>
+</form>
+</div>
+</section>
+<!-- BACKGROUND -->
+<section class="background"><div class="wrap collaboration-inner"><div class="background-logos"><img alt="École des Ponts Business School" src="assets/asset_07_91010053a2a5.png"/><a aria-label="Progressio Foundation" class="progressio-link" href="https://progressio.foundation/" rel="noopener noreferrer" target="_blank"><img alt="Progressio Foundation" src="assets/asset_11_b0a6717c78e1.png"/></a></div><div class="collaboration-intro"><div class="eyebrow">Built together</div><h2>Two institutions, one shared ambition</h2><p>Leadership: RESET brings together École des Ponts Business School and Progressio Foundation. The collaboration combines executive education and leadership development with a long-standing international ecosystem of entrepreneurs, impact builders, and civic innovators, creating a space where reflection can lead to practical, responsible action.</p></div><div class="collaboration-grid"><article class="collaboration-card"><h3><a href="https://progressio.foundation/" rel="noopener noreferrer" target="_blank">Progressio Foundation</a></h3><p>Founded in 1989 in Rotterdam by Marcello Palazzi, alongside Paul Kloppenborg and Pjotr Hesseling, Progressio is a Dutch nonprofit that finds, connects, and supports entrepreneurs driving human progress.</p><p>Over more than 35 years, it has been at the centre of 35+ ventures and 350+ initiatives, engaging 35,000+ global decision-makers. Its focus areas include civic economy, B Corps, regenerative business, and impact investing. Palazzi co-founded B Lab Europe in 2013 and has worked with the UN, the Vatican, and world leaders on responsible business agendas.</p></article><article class="collaboration-card"><h3>École des Ponts Business School</h3><p>Founded in 1987 by Célia Russo, École des Ponts Business School is the graduate business arm of the prestigious École nationale des ponts et chaussées, established in 1747 and part of Institut Polytechnique de Paris.</p><p>With the motto “In business to make a better world,” it was the first school in France to offer an English-language MBA. It offers Executive MBA and DBA programs focused on leadership, innovation, and sustainability, with 7,000+ alumni worldwide. Accredited by AMBA and AACSB, it is currently led by Dean Alon Rozen.</p></article></div></div></section>
+<!-- BOTTOM CTA -->
+<section class="bottom-cta">
+<div class="wrap">
+<h2>Ready to take the next step?</h2>
+<p>Get in touch, request a nomination, or explore the full program brochure.</p>
+<div class="bottom-cta-buttons">
+<a class="btn" data-reset-contact="true" href="#reset-contact-form">Contact us</a>
+<a class="btn btn-primary js-open-candidate-flow" href="#nomination-request-form">Apply now</a>
+<a class="btn" href="https://form.jotform.com/262354842912055" rel="noopener" target="_blank">Download brochure</a>
+</div>
+</div>
+</section>
+<footer>
+  Leadership: RESET 2027 · École des Ponts Business School × Progressio Foundation
+</footer>
+<script>
+(function(){
+  function px(n){ return n + 'px'; }
+
+  function positionLine(timeline){
+    var line = timeline.querySelector('.t-line');
+    var dots = timeline.querySelectorAll('.t-dot');
+    if(!line || dots.length === 0) return;
+    var timelineRect = timeline.getBoundingClientRect();
+    var firstRect = dots[0].getBoundingClientRect();
+    var lastRect = dots[dots.length - 1].getBoundingClientRect();
+    var centerX = (firstRect.left + firstRect.width / 2) - timelineRect.left;
+    var centerYFirst = (firstRect.top + firstRect.height / 2) - timelineRect.top;
+    var centerYLast = (lastRect.top + lastRect.height / 2) - timelineRect.top;
+    line.style.left = px(centerX - 1);
+    line.style.top = px(centerYFirst);
+    line.dataset.targetHeight = Math.max(0, centerYLast - centerYFirst);
+    if(line.dataset.revealed === 'true'){
+      var prevTransition = line.style.transition;
+      line.style.transition = 'none';
+      line.style.height = px(line.dataset.targetHeight);
+      void line.offsetHeight;
+      line.style.transition = prevTransition || '';
+    }
+  }
+
+  function init(){
+    var timelines = document.querySelectorAll('.timeline');
+    timelines.forEach(positionLine);
+
+    var items = document.querySelectorAll('.t-item');
+    items.forEach(function(item, i){
+      var content = item.querySelector('.t-content');
+      if(content){ content.style.transitionDelay = (i * 0.08) + 's'; }
+      var dot = item.querySelector('.t-dot');
+      if(dot){ dot.style.transitionDelay = (i * 0.08 + 0.2) + 's'; }
+    });
+
+    if(!('IntersectionObserver' in window)){
+      items.forEach(function(item){ item.classList.add('in-view'); });
+      timelines.forEach(function(tl){
+        var line = tl.querySelector('.t-line');
+        if(line){ line.style.height = px(line.dataset.targetHeight || 0); line.dataset.revealed = 'true'; }
+      });
+      return;
+    }
+
+    var itemObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          itemObserver.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.25});
+    items.forEach(function(item){ itemObserver.observe(item); });
+
+    var lineObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          var line = entry.target.querySelector('.t-line');
+          if(line){
+            line.style.height = px(line.dataset.targetHeight || 0);
+            line.dataset.revealed = 'true';
+          }
+          lineObserver.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.1});
+    timelines.forEach(function(tl){ lineObserver.observe(tl); });
+  }
+
+  window.addEventListener('load', init);
+  window.addEventListener('resize', function(){
+    document.querySelectorAll('.timeline').forEach(positionLine);
+  });
+})();
+</script>
+<script>
+(function(){
+  const flow = document.getElementById('nomination-request-form');
+  const triggers = document.querySelectorAll('.js-open-candidate-flow');
+  const continueBtn = document.getElementById('flowContinueToForm');
+  const form = document.getElementById('candidateNominatorContactForm');
+  const whyNominated = document.getElementById('flow-why-nominated');
+  const closeBtn = document.getElementById('candidateFlowClose');
+  const directHash = '#nomination-request-form';
+
+  function openFlow(e, updateHash){
+    if(e) e.preventDefault();
+    if(!flow) return;
+    flow.classList.add('is-open');
+    flow.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    if(updateHash !== false && history.replaceState){ history.replaceState(null, '', directHash); }
+    window.setTimeout(function(){ if(continueBtn) continueBtn.focus(); }, 120);
+  }
+
+  function closeFlow(){
+    if(!flow) return;
+    flow.classList.remove('is-open');
+    flow.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+  }
+
+  triggers.forEach(function(trigger){
+    trigger.addEventListener('click', function(e){ openFlow(e, true); });
+  });
+
+  if(closeBtn) closeBtn.addEventListener('click', closeFlow);
+  if(flow) flow.addEventListener('click', function(e){
+    if(e.target === flow) closeFlow();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && flow && flow.classList.contains('is-open')) closeFlow();
+  });
+
+  if(continueBtn) continueBtn.addEventListener('click', function(){
+    if(form){
+      form.classList.remove('form-hidden');
+      form.setAttribute('aria-hidden', 'false');
+      form.scrollIntoView({behavior:'smooth', block:'nearest'});
+      const firstField = form.querySelector('input, textarea, select');
+      if(firstField) window.setTimeout(function(){ firstField.focus(); }, 250);
+    }
+  });
+
+  // Opening this direct URL from the PDF opens the nomination-request modal automatically.
+  if(window.location.hash === directHash || window.location.hash === '#candidate-application'){
+    openFlow(null, false);
+  }
+
+  function sentenceCount(value){
+    const text = value.trim();
+    if(!text) return 0;
+    const matches = text.match(/[^.!?]+[.!?]+|[^.!?]+$/g);
+    return matches ? matches.filter(function(s){ return s.trim().length > 0; }).length : 0;
+  }
+
+  if(form) form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const status = document.getElementById('flowStatusMsg');
+    if(whyNominated && sentenceCount(whyNominated.value) > 5){
+      if(status){
+        status.textContent = 'Please keep your comment to a maximum of 5 sentences.';
+        status.classList.add('show');
+      }
+      whyNominated.focus();
+      return;
+    }
+    // TODO: wire this up to your form backend / CRM endpoint.
+    if(status){
+      status.textContent = "Thanks, we'll be in touch with your nominator shortly.";
+      status.classList.add('show');
+    }
+    this.reset();
+  });
+})();
+</script>
+<div aria-hidden="true" class="reset-contact-modal" id="reset-contact-form">
+<div aria-labelledby="reset-contact-title" aria-modal="true" class="reset-contact-dialog" role="dialog">
+<button aria-label="Close contact form" class="reset-contact-close" type="button">×</button>
+<div class="reset-contact-eyebrow">Contact RESET</div>
+<h2 id="reset-contact-title">Get in touch</h2>
+<p class="reset-contact-note">Send us your message and we will answer within a maximum of 5 business days.</p>
+<form class="reset-contact-form" id="resetContactForm">
+<div class="reset-contact-field">
+<label for="resetContactName">Name</label>
+<input autocomplete="name" id="resetContactName" name="name" required="" type="text"/>
+</div>
+<fieldset class="reset-contact-field reset-contact-choice">
+<legend class="reset-contact-legend">I am</legend>
+<label><input name="role" required="" type="radio" value="Nominator"/> I am a Nominator</label>
+<label><input name="role" required="" type="radio" value="Candidate"/> I am a Candidate</label>
+</fieldset>
+<div class="reset-contact-field">
+<label for="resetContactEmail">Email address</label>
+<input autocomplete="email" id="resetContactEmail" name="email" required="" type="email"/>
+</div>
+<div class="reset-contact-field">
+<label for="resetContactComment">Comment</label>
+<textarea id="resetContactComment" name="comment" required=""></textarea>
+</div>
+<button class="btn reset-contact-submit" type="submit">Submit</button>
+<p class="reset-contact-helper">Submitting will open your email application with the message prepared for info@pontsbschool.com.</p>
+</form>
+</div>
+</div>
+<script>
+(function(){
+  const modal = document.getElementById('reset-contact-form');
+  const form = document.getElementById('resetContactForm');
+  if(!modal || !form) return;
+
+  const closeBtn = modal.querySelector('.reset-contact-close');
+  const nameInput = document.getElementById('resetContactName');
+
+  function openContactModal(){
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+    window.setTimeout(() => nameInput && nameInput.focus(), 50);
+  }
+
+  function closeContactModal(){
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+    if(location.hash === '#reset-contact-form'){
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+  }
+
+  document.querySelectorAll('a[href="#reset-contact-form"], [data-reset-contact]').forEach(el => {
+    el.addEventListener('click', function(e){
+      e.preventDefault();
+      openContactModal();
+      history.replaceState(null, '', '#reset-contact-form');
+    });
+  });
+
+  closeBtn && closeBtn.addEventListener('click', closeContactModal);
+  modal.addEventListener('click', function(e){
+    if(e.target === modal) closeContactModal();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && modal.classList.contains('is-open')) closeContactModal();
+  });
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!form.reportValidity()) return;
+
+    const data = new FormData(form);
+    const body = [
+      'Name: ' + (data.get('name') || ''),
+      'Role: ' + (data.get('role') || ''),
+      'Email address: ' + (data.get('email') || ''),
+      '',
+      'Comment:',
+      (data.get('comment') || '')
+    ].join('\\n');
+
+    const mailto = 'mailto:info@pontsbschool.com'
+      + '?subject=' + encodeURIComponent('RESET Contact form:')
+      + '&body=' + encodeURIComponent(body);
+
+    window.location.href = mailto;
+  });
+
+  if(location.hash === '#reset-contact-form'){
+    openContactModal();
+  }
+})();
+</script></body>
+</html>

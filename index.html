@@ -1,0 +1,2885 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Leadership: RESET 2027, For Nominators</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&amp;family=Barlow:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --white:#ffffff;
+    --pale:#EAF2FF;
+    --pale-2:#DCE9FF;
+    --line:#C6DAFF;
+    --ink:#0B2B8C;
+    --headline:#1745E0;
+    --red:#FF4433;
+    --max:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--white);
+    color:var(--ink);
+    font-family:'Barlow', sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Barlow Condensed', sans-serif;
+    color:var(--headline);
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    margin:0;
+  }
+  a{color:var(--headline);}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 32px;}
+  section{padding:96px 0;}
+  .eyebrow{
+    font-family:'Barlow Condensed', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.18em;
+    font-weight:700;
+    font-size:17px;
+    color:var(--red);
+    margin-bottom:14px;
+    display:flex; align-items:center; gap:10px;
+  }
+  p{margin:0 0 16px; max-width:62ch;}
+  .lede{font-size:19px; color:var(--ink); max-width:56ch;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    padding:48px 0 40px;
+    overflow:hidden;
+    min-height:500px;
+    background:linear-gradient(180deg, var(--pale) 0%, #ffffff 100%);
+  }
+  .hero .wrap{position:relative; z-index:2;}
+  .tag-year{
+    display:inline-block;
+    color:var(--red);
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:800;
+    font-size:14px;
+    letter-spacing:0.08em;
+    margin-bottom:20px;
+  }
+  .hero h1{
+    font-size:clamp(48px, 7.8vw, 96px);
+    font-weight:900;
+    line-height:0.95;
+  }
+  .hero h1 span{
+    display:block;
+    color:var(--red);
+  }
+  .hero-sub{
+    margin-top:20px;
+    font-size:clamp(18px,2vw,22px);
+    max-width:40ch;
+    color:var(--ink);
+    font-weight:500;
+  }
+  .hero-sub b{color:var(--headline);}
+  .hero-btn{ margin-top:24px; }
+  .hero-meta{
+    display:flex; gap:40px; flex-wrap:wrap;
+    margin-top:56px;
+    padding-top:28px;
+    border-top:1px solid var(--line);
+  }
+  .hero-meta div b{
+    display:block;
+    font-family:'Barlow Condensed', sans-serif;
+    color:var(--headline);
+    font-size:28px;
+    font-weight:800;
+  }
+  .hero-meta div span{
+    font-size:13px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--ink);
+    opacity:0.75;
+  }
+  .wing{
+    position:absolute;
+    right:0; bottom:0;
+    height:min(80%, 500px);
+    max-width:46vw;
+    width:auto;
+    object-fit:contain;
+    display:block;
+    z-index:1;
+  }
+
+  /* ---------- TENSION ---------- */
+  .tension{
+    background:var(--white);
+    position:relative;
+    overflow:hidden;
+  }
+  .tension::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:url('assets/asset_01_30e04b2dd5a0.webp');
+    background-repeat:no-repeat;
+    background-position:right top;
+    background-size:auto 100%;
+    opacity:1;
+    pointer-events:none;
+  }
+  .tension .wrap{ position:relative; z-index:1; }
+  .tension .grid{
+    display:grid; grid-template-columns: 1.1fr 0.9fr; gap:64px; align-items:center;
+  }
+  .tension h2{
+    font-size:clamp(32px,4vw,50px);
+    font-weight:800;
+    line-height:1.06;
+    margin-bottom:24px;
+  }
+  .tension .callout{
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:800;
+    font-size:22px;
+    color:var(--red);
+    text-transform:uppercase;
+    margin-top:20px;
+  }
+  .panel{
+    background:var(--pale);
+    border-radius:24px;
+    padding:40px;
+  }
+  .panel h4{
+    font-family:'Barlow Condensed', sans-serif; font-weight:800;
+    color:var(--headline); text-transform:uppercase; font-size:15px;
+    letter-spacing:0.08em; margin-bottom:18px;
+  }
+  .panel ul{list-style:none; margin:0; padding:0;}
+  .panel li{
+    padding:14px 0;
+    border-bottom:1px solid var(--line);
+    font-size:16px;
+  }
+  .panel li:last-child{border-bottom:none;}
+
+  /* ---------- HOW IT WORKS ---------- */
+  .how{background:var(--pale);}
+  .how-stats{
+    display:flex; gap:0; flex-wrap:wrap;
+    margin-top:44px;
+    border-top:1px solid var(--line);
+  }
+  .how-stats div{
+    flex:1 1 160px;
+    padding:24px 28px 0 0;
+  }
+  .how-stats div b{
+    display:block;
+    font-family:'Barlow Condensed', sans-serif;
+    color:var(--headline);
+    font-size:40px;
+    font-weight:900;
+    line-height:1;
+  }
+  .how-stats div span{
+    display:block;
+    margin-top:6px;
+    font-size:13px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--ink);
+    opacity:0.75;
+  }
+
+  /* ---------- PILLARS ---------- */
+  .pillars{
+    background:var(--pale);
+    position:relative;
+    overflow:hidden;
+  }
+  .pillars .wrap{ position:relative; z-index:1; }
+  .section-head{ margin-bottom:56px; max-width:70ch;}
+  .section-head h2{ font-size:clamp(32px,4.5vw,54px); font-weight:800; line-height:1.03;}
+  .pillar-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:24px;
+  }
+  .pillar{
+    background:var(--white);
+    border-radius:20px;
+    padding:32px 28px;
+    border:1px solid var(--line);
+  }
+  .pillar .num{
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:900;
+    font-size:15px;
+    color:var(--red);
+    letter-spacing:0.05em;
+  }
+  .pillar h3{
+    font-size:24px;
+    font-weight:800;
+    margin:10px 0 12px;
+  }
+  .pillar p{font-size:15px; margin:0; color:var(--ink); opacity:0.85;}
+  .pillar h3::first-letter{color:var(--red);}
+
+  /* ---------- WHOM TO NOMINATE ---------- */
+  .who{background:var(--white);}
+  .who-grid{
+    display:grid; grid-template-columns: 1.3fr 0.7fr; gap:56px; align-items:start;
+  }
+  .who-item{
+    display:grid; grid-template-columns:56px 1fr; gap:20px;
+    padding:26px 0;
+    border-top:1px solid var(--line);
+  }
+  .who-item:last-child{border-bottom:1px solid var(--line);}
+  .who-item .num{
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:900; font-size:34px; color:var(--red);
+  }
+  .who-item h3{font-size:21px; font-weight:800; margin-bottom:6px;}
+  .who-item p{font-size:15.5px; margin:0; color:var(--ink); opacity:0.85;}
+  .criteria{
+    background:var(--pale); border-radius:24px; padding:36px;
+    position:sticky; top:32px;
+  }
+  .criteria h4{
+    font-family:'Barlow Condensed', sans-serif;
+    color:var(--headline); text-transform:uppercase; font-weight:800;
+    font-size:15px; letter-spacing:0.1em; margin-bottom:20px;
+  }
+  .criteria ul{list-style:none; margin:0; padding:0;}
+  .criteria li{
+    font-size:15.5px; padding:10px 0 10px 26px; position:relative;
+    border-bottom:1px solid var(--line);
+  }
+  .criteria li:last-child{border-bottom:none;}
+  .criteria li::before{
+    content:"";
+    position:absolute; left:0; top:16px;
+    width:8px; height:8px; border-radius:50%;
+    background:var(--red);
+  }
+
+  /* ---------- RIPPLE / RETURN ---------- */
+  .ripple{background:var(--pale);}
+  .ripple-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:24px;}
+  .ripple-card{
+    background:var(--white); border-radius:20px; padding:30px; border:1px solid var(--line);
+  }
+  .ripple-card b{color:var(--headline); display:block; font-size:15px; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:8px; font-family:'Barlow Condensed', sans-serif; font-weight:800;}
+  .ripple-card p{font-size:15px; margin:0; color:var(--ink); opacity:0.85;}
+
+  /* ---------- GETS / PAYS FORWARD ---------- */
+  .value-exchange{
+    background:var(--white);
+    position:relative;
+    overflow:hidden;
+    padding-bottom:48px;
+  }
+  .value-exchange::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:url('assets/asset_01_30e04b2dd5a0.webp');
+    background-repeat:no-repeat;
+    background-position:right top;
+    background-size:auto 100%;
+    opacity:1;
+    pointer-events:none;
+  }
+  .value-exchange .wrap{ position:relative; z-index:1; }
+  .value-grid{display:grid; grid-template-columns:1fr 1fr; gap:28px;}
+  .value-card{border:1px solid var(--line); border-radius:22px; padding:36px;}
+  .value-card h3{font-size:22px; font-weight:800; margin-bottom:18px;}
+  .value-card ol,.value-card ul{margin:0; padding-left:0; list-style:none;}
+  .value-card li{
+    font-size:15px; padding:12px 0 12px 30px; position:relative;
+    border-bottom:1px solid var(--line); color:var(--ink); opacity:0.9;
+  }
+  .value-card li:last-child{border-bottom:none;}
+  .value-card li::before{
+    content:"→";
+    position:absolute; left:0; color:var(--red); font-weight:700;
+  }
+
+  /* ---------- SEND A TEAM ---------- */
+  .team{
+    background:var(--white); color:var(--ink); border-radius:0;
+    position:relative; overflow:hidden;
+    padding-top:48px;
+  }
+  .team::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:url('assets/asset_02_a7f617853534.png');
+    background-repeat:no-repeat;
+    background-position:right -60px bottom -40px;
+    background-size:620px auto;
+    opacity:0.9;
+    pointer-events:none;
+  }
+  .team .wrap{padding:80px 32px; position:relative; z-index:1;}
+  .team h2{color:var(--headline); font-size:clamp(32px,4.5vw,50px); font-weight:800; max-width:20ch;}
+  .team-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:44px;}
+  .team-card{background:var(--white); border:1px solid var(--line); border-radius:18px; padding:28px;}
+  .team-card h3{color:var(--headline); font-size:19px; font-weight:800; margin-bottom:10px;}
+  .team-card p{font-size:14.5px; opacity:0.85; margin:0; color:var(--ink);}
+
+  /* ---------- JOURNEY ---------- */
+  .journey{background:var(--pale); padding:56px 0;}
+  .timeline{
+    position:relative;
+    margin-top:36px;
+    padding-left:36px;
+  }
+  .t-line{
+    position:absolute;
+    width:2px;
+    background:var(--line);
+    top:0; left:2px; height:0;
+    transition:height 1s ease;
+  }
+  .t-item{
+    position:relative; padding:0 0 24px 28px;
+  }
+  .t-dot{
+    position:absolute; left:-45px; top:2px;
+    width:16px; height:16px; border-radius:50%;
+    background:var(--white); border:3px solid var(--headline);
+    transform:scale(0);
+    transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
+  }
+  .t-item.in-view .t-dot{ transform:scale(1); }
+  .t-item.milestone .t-dot{ background:var(--red); border-color:var(--red); }
+  .t-content{
+    opacity:0; transform:translateX(-16px);
+    transition:opacity 0.6s ease, transform 0.6s ease;
+  }
+  .t-item.in-view .t-content{ opacity:1; transform:translateX(0); }
+  .t-item .when{
+    font-family:'Barlow Condensed', sans-serif;
+    color:var(--red); font-weight:800; font-size:14px;
+    letter-spacing:0.08em; text-transform:uppercase;
+  }
+  .t-item h3{font-size:22px; font-weight:800; margin:4px 0 4px;}
+  .t-item .dates{font-size:14px; color:var(--ink); opacity:0.7;}
+
+  /* ---------- WHY ---------- */
+  .why{background:var(--white);}
+  .why-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:24px;}
+  .why-item{padding:28px 0; border-top:1px solid var(--line);}
+  .why-item h3{font-size:20px; font-weight:800; margin-bottom:8px;}
+  .why-item p{font-size:15px; color:var(--ink); opacity:0.85; margin:0;}
+
+  /* ---------- PRICING ---------- */
+  .pricing{background:var(--pale);}
+  .price-grid{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px; margin-top:48px; }
+  .price-card{ background:var(--white); border:1px solid var(--line); border-radius:20px; padding:32px; }
+  .price-card .label{
+    font-family:'Barlow Condensed', sans-serif; font-weight:700;
+    text-transform:uppercase; letter-spacing:0.08em; font-size:13px;
+    color:var(--ink); opacity:0.7;
+  }
+  .price-card .value{
+    font-family:'Barlow Condensed', sans-serif; font-weight:900;
+    font-size:40px; margin:10px 0; color:var(--headline);
+  }
+  .price-card .value.amount{color:var(--red);}
+  .price-card p{font-size:14px; color:var(--ink); opacity:0.85; margin:0;}
+
+  /* ---------- CTA ---------- */
+  .cta{background:var(--white); text-align:center; padding:120px 0;}
+  .cta h2{font-size:clamp(34px,6vw,60px); font-weight:900; max-width:18ch; margin:0 auto 20px;}
+  .cta p{margin:0 auto 40px; font-size:18px;}
+  .btn{
+    display:inline-block;
+    background:transparent; color:var(--red); border:2px solid var(--red);
+    font-family:'Barlow Condensed', sans-serif; font-weight:800;
+    text-transform:uppercase; letter-spacing:0.06em;
+    padding:16px 42px; border-radius:999px; text-decoration:none;
+    font-size:16px;
+    transition:transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+  }
+  .btn:hover{ background:var(--red); color:var(--white); transform:translateY(-2px); }
+  .switch{ margin-top:28px; font-size:14px; }
+  .switch a{color:var(--ink); text-decoration:underline; opacity:0.7;}
+
+  footer{
+    padding:40px 0; text-align:center; font-size:13px; color:var(--ink); opacity:0.6;
+    border-top:1px solid var(--line);
+  }
+
+  @media (max-width:860px){
+    .tension .grid, .who-grid, .ripple-grid, .pillar-grid, .value-grid, .team-grid, .why-grid, .price-grid{
+      grid-template-columns:1fr;
+    }
+    .criteria{position:static;}
+    .wing{display:none;}
+    .hero{min-height:auto; padding:48px 0 44px;}
+    section{padding:64px 0;}
+  }
+  /* ---------- TOP NAV ---------- */
+  .topnav{
+    position:sticky; top:0; z-index:100;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .topnav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 32px;
+  }
+  .topnav-logo img{ height:56px; width:auto; display:block; }
+  .topnav-links{ display:flex; align-items:center; gap:28px; }
+  .topnav-links a{
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:700; text-transform:uppercase; letter-spacing:0.05em;
+    font-size:13px; color:var(--ink); text-decoration:none;
+    opacity:0.8; transition:opacity 0.15s ease, color 0.15s ease;
+  }
+  .topnav-links a:hover{ color:var(--red); opacity:1; }
+  .topnav-btn{
+    background:transparent !important;
+    color:var(--red) !important;
+    border:2px solid var(--red);
+    opacity:1 !important;
+    padding:8px 20px;
+    border-radius:999px;
+    transition:background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  }
+  .topnav-btn:hover{ background:var(--red); color:var(--white) !important; transform:translateY(-1px); }
+
+  /* ---------- BACKGROUND ---------- */
+  .background{ background:var(--white); border-top:1px solid var(--line); padding:64px 0; }
+  .background-inner{
+    display:flex; align-items:center; gap:48px; flex-wrap:wrap;
+  }
+  .background-logos{ display:flex; align-items:center; gap:36px; flex:0 0 auto; }
+  .background-logos img{ height:44px; width:auto; display:block; }
+  .background p{
+    margin:0; font-size:15px; color:var(--ink); opacity:0.85; max-width:60ch; flex:1 1 380px;
+  }
+
+  @media (max-width:640px){
+    .topnav-inner{ padding:12px 20px; flex-wrap:wrap; gap:10px; }
+    .topnav-links{ gap:18px; }
+    .background-inner{ flex-direction:column; align-items:flex-start; }
+  }
+  /* ---------- BOTTOM CTA ---------- */
+  .bottom-cta{ background:var(--white); padding:96px 0; text-align:center; border-top:1px solid var(--line); }
+  .bottom-cta .wrap{ max-width:760px; }
+  .bottom-cta h2{ color:var(--headline); font-size:clamp(30px,4.5vw,46px); font-weight:900; margin:0 auto 12px; max-width:20ch; }
+  .bottom-cta p{ color:var(--ink); opacity:0.85; margin:0 auto 40px; font-size:16px; }
+  .bottom-cta-buttons{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+  .btn-primary{
+    background:var(--red); color:var(--white); border:2px solid var(--red);
+  }
+  .btn-primary:hover{ background:transparent; color:var(--red); transform:translateY(-2px); }
+
+
+/* FINAL REQUESTED OVERRIDE — move hummingbird background to How section */
+.tension::before,
+.returns::before,
+.value-exchange::before {
+  display: none !important;
+  background-image: none !important;
+  content: none !important;
+}
+
+.tension,
+.value-exchange {
+  background-image: none !important;
+}
+
+.how {
+  background: var(--white) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.how::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background-image:url('assets/asset_01_30e04b2dd5a0.webp');
+  background-repeat: no-repeat !important;
+  background-position: right center !important;
+  background-size: contain !important;
+  opacity: 1 !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+
+.how .wrap {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+
+
+  /* ---------- EMBEDDED NOMINATION FORM ---------- */
+  .nomination-section{
+    display:none;
+    background:linear-gradient(180deg, var(--pale) 0%, #ffffff 420px);
+    padding:96px 0;
+    border-top:1px solid var(--line);
+    scroll-margin-top:96px;
+  }
+  .nomination-section.is-open{display:block;}
+  .nomination-wrap{max-width:980px; margin:0 auto; padding:0 32px;}
+  .nomination-header{margin-bottom:32px;}
+  .nomination-header .tag-year{
+    display:inline-block;
+    color:var(--red);
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:800;
+    font-size:14px;
+    letter-spacing:0.08em;
+    margin-bottom:18px;
+  }
+  .nomination-header h2{
+    font-size:clamp(38px,7vw,58px);
+    font-weight:900;
+    line-height:0.98;
+    max-width:none;
+  }
+  .nomination-header h2 span{display:block; color:var(--red); white-space:nowrap;}
+  .nomination-header .nomination-lede{
+    margin-top:18px;
+    font-size:17px;
+    color:var(--ink);
+    max-width:56ch;
+    opacity:0.9;
+  }
+  .nomination-section form{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:36px;
+    margin:0;
+  }
+  .nomination-section fieldset{border:0; padding:0; margin:0 0 36px;}
+  .nomination-section fieldset:last-of-type{margin-bottom:0;}
+  .nomination-section legend{
+    font-family:'Barlow Condensed', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.14em;
+    font-weight:700;
+    font-size:14px;
+    color:var(--red);
+    padding:0 0 14px;
+    width:100%;
+    border-bottom:1px solid var(--line);
+    margin-bottom:20px;
+  }
+  .nomination-section .field{margin-bottom:18px;}
+  .nomination-section .field:last-child{margin-bottom:0;}
+  .nomination-section .row2{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  .nomination-section .row3{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px;}
+  .nomination-section .row3 .field{display:flex; flex-direction:column; min-width:0;}
+  .nomination-section .row3 .field > label{min-height:44px; display:flex; align-items:flex-start; margin-bottom:8px;}
+  .nomination-section .row3 .yesno{margin-top:auto; min-height:58px; align-items:center;}
+  .nomination-section label{
+    display:block;
+    font-size:13px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    color:var(--ink);
+    opacity:0.85;
+    margin-bottom:6px;
+  }
+  .nomination-section .req{color:var(--red); white-space:nowrap; margin-left:3px;}
+  .nomination-section input[type=text],
+  .nomination-section input[type=email],
+  .nomination-section input[type=tel],
+  .nomination-section input[type=url],
+  .nomination-section textarea{
+    width:100%;
+    font-family:'Barlow', sans-serif;
+    font-size:16px;
+    color:var(--ink);
+    background:var(--pale);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:12px 14px;
+    transition:border-color .15s, background .15s;
+  }
+  .nomination-section textarea{resize:vertical; min-height:88px;}
+  .nomination-section input:focus,
+  .nomination-section textarea:focus{
+    outline:none;
+    border-color:var(--headline);
+    background:var(--white);
+  }
+  .nomination-section .hint{font-size:13px; color:var(--ink); opacity:0.6; margin-top:6px;}
+  .nomination-section .yesno{
+    display:flex;
+    gap:22px;
+    background:var(--pale);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:12px 16px;
+    min-width:0;
+  }
+  .nomination-section .yesno label{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    text-transform:none;
+    font-weight:500;
+    font-size:15px;
+    opacity:1;
+    margin:0;
+  }
+  .nomination-section .yesno input{margin:0;}
+  .nomination-section .consent{
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+    background:var(--pale);
+    border-radius:12px;
+    padding:16px 18px;
+  }
+  .nomination-section .consent input{margin-top:3px;}
+  .nomination-section .consent label{
+    text-transform:none;
+    font-weight:500;
+    font-size:14.5px;
+    opacity:1;
+    margin:0;
+  }
+  .nomination-section .submit-row{margin-top:32px;}
+  .nomination-section button[type=submit]{
+    font-family:'Barlow Condensed', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    font-weight:800;
+    font-size:17px;
+    color:var(--white);
+    background:var(--headline);
+    border:0;
+    border-radius:999px;
+    padding:15px 34px;
+    cursor:pointer;
+    transition:background .15s, transform .1s;
+  }
+  .nomination-section button[type=submit]:hover{background:#0f34b0;}
+  .nomination-section button[type=submit]:active{transform:scale(0.98);}
+  .nomination-section .status{
+    display:none;
+    margin-top:20px;
+    padding:16px 18px;
+    border-radius:12px;
+    background:var(--pale-2);
+    color:var(--ink);
+    font-size:15px;
+    font-weight:600;
+  }
+  .nomination-section .status.show{display:block;}
+  @media (max-width:560px){
+    .nomination-wrap{padding:0 20px;}
+    .nomination-section form{padding:24px 20px;}
+    .nomination-section .row2,
+    .nomination-section .row3{grid-template-columns:1fr;}
+  }
+
+
+
+  /* ---------- MENTORS & FACULTY ---------- */
+  .mentors-section{
+    background:linear-gradient(180deg, var(--white) 0%, var(--pale) 100%);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .mentors-head{
+    display:grid;
+    grid-template-columns:minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap:48px;
+    align-items:end;
+    margin-bottom:44px;
+  }
+  .mentors-head h2{
+    font-size:clamp(42px,5.5vw,68px);
+    font-weight:900;
+    line-height:.98;
+    max-width:11ch;
+  }
+  .mentors-head .lede{
+    margin:0;
+    max-width:54ch;
+  }
+  .mentors-grid{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:18px;
+  }
+  .mentor-card{
+    background:rgba(255,255,255,.94);
+    border:1px solid var(--line);
+    border-top:4px solid var(--headline);
+    padding:24px 22px 22px;
+    min-height:205px;
+    display:flex;
+    flex-direction:column;
+  }
+  .mentor-card h3{
+    margin:0 0 10px;
+    font-size:24px;
+    line-height:1.05;
+    font-weight:800;
+    color:var(--headline);
+  }
+  .mentor-role{
+    margin:0 0 18px;
+    font-size:16px;
+    line-height:1.45;
+    color:var(--ink);
+  }
+  .mentor-location{
+    margin-top:auto;
+    margin-bottom:0;
+    font-family:'Barlow Condensed', sans-serif;
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    color:var(--red);
+  }
+  @media (max-width:980px){
+    .mentors-head{grid-template-columns:1fr; gap:18px;}
+    .mentors-head h2{max-width:none;}
+    .mentors-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  }
+  @media (max-width:560px){
+    .mentors-grid{grid-template-columns:1fr;}
+    .mentor-card{min-height:0;}
+  }
+
+
+  /* ---------- DECORATIVE ART BREAKS ---------- */
+  .reset-art-break{
+    position:relative;
+    width:100%;
+    height:clamp(180px, 20vw, 300px);
+    background-color:#fff;
+    background-repeat:no-repeat;
+    overflow:hidden;
+  }
+  .reset-art-break.flora{
+    background-image:url("assets/asset_03_896d7ee9a068.png");
+    background-size:cover;
+    background-position:right 82%;
+  }
+  .reset-art-break.jelly{
+    background-image:url("assets/asset_04_593ac3c55541.png");
+    background-size:cover;
+    background-position:left 18%;
+  }
+  .reset-art-break.give{
+    background-image:url("assets/asset_05_5af5f1c6f2af.png");
+    background-size:cover;
+    background-position:right 52%;
+  }
+  .reset-art-break.lobster{
+    background-image:url("assets/asset_06_60b854757dc1.png");
+    background-size:cover;
+    background-position:right 50%;
+  }
+  @media (max-width: 760px){
+    .reset-art-break{height:150px;}
+    .reset-art-break.flora{background-size:860px auto; background-position:right bottom;}
+    .reset-art-break.jelly{background-size:820px auto; background-position:left top;}
+    .reset-art-break.give{background-size:820px auto; background-position:right center;}
+    .reset-art-break.lobster{background-size:820px auto; background-position:right center;}
+  }
+
+  /* ---------- NOMINATORS VISUAL REFINEMENTS ---------- */
+  /* Keep these two sections clean and white. */
+  .tension::before,
+  .value-exchange::before{
+    content:none !important;
+    display:none !important;
+    background-image:none !important;
+  }
+
+  /* Lift the original school-of-fish artwork so it sits at the transition
+     between the value section and Send a team, rather than behind the copy. */
+  .team{
+    overflow:visible !important;
+    position:relative;
+    padding-top:72px;
+  }
+  .team::before{
+    top:-155px !important;
+    right:0 !important;
+    bottom:auto !important;
+    left:0 !important;
+    height:255px !important;
+    background-position:right 20px top 0 !important;
+    background-size:430px auto !important;
+    opacity:0.9 !important;
+    z-index:0;
+  }
+  .team .wrap{
+    position:relative;
+    z-index:1;
+  }
+
+  /* Replace the former Give artwork with the supplied role-model cloud. */
+  .why{
+    overflow:hidden;
+    padding-bottom:28px;
+  }
+  .why .give{
+    height:clamp(190px, 22vw, 290px);
+    margin-top:20px;
+    background-image:url("assets/asset_07_35f855a4bc67.png") !important;
+    background-size:auto 100% !important;
+    background-position:right center !important;
+    background-repeat:no-repeat !important;
+    background-color:#fff !important;
+  }
+
+  @media(max-width:760px){
+    .team{padding-top:54px;}
+    .team::before{
+      top:-105px !important;
+      height:185px !important;
+      background-size:300px auto !important;
+      background-position:right -35px top 0 !important;
+    }
+    .why .give{
+      height:190px;
+      background-size:auto 85% !important;
+      background-position:right bottom !important;
+    }
+  }
+</style>
+<link href="assets/asset_08_b9dbc36ad844.png" rel="icon" type="image/png"/>
+<link href="assets/asset_08_b9dbc36ad844.png" rel="shortcut icon" type="image/png"/>
+<link href="assets/asset_08_b9dbc36ad844.png" rel="apple-touch-icon"/>
+<style>
+/* ===== RESET shared refinements ===== */
+.journey-legend{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px 34px;
+  align-items:center;
+  margin:22px 0 8px 0;
+  padding:0;
+}
+.journey-legend-item{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  color:var(--headline);
+  font-size:15px;
+  letter-spacing:.04em;
+  font-weight:500;
+}
+.journey-legend-dot{
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  flex:0 0 22px;
+  display:inline-block;
+}
+.journey-legend-dot.in-person{
+  background:var(--red);
+  border:2px solid var(--red);
+}
+.journey-legend-dot.online{
+  background:var(--white);
+  border:2px solid var(--headline);
+}
+.bottom-cta{
+  background:var(--pale) !important;
+}
+.background a.progressio-link{
+  display:inline-flex;
+  align-items:center;
+  text-decoration:none;
+}
+.background a.progressio-link img{
+  display:block;
+}
+.background p a.progressio-text-link{
+  color:inherit;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+@media (max-width:700px){
+  .journey-legend{
+    gap:12px;
+    align-items:flex-start;
+  }
+  .journey-legend-item{
+    width:100%;
+    font-size:14px;
+  }
+}
+</style><style>
+/* ===== Latest RESET refinements ===== */
+
+/* Make RESET substantially larger in both hero sections */
+.hero h1{
+  font-size:clamp(76px, 13vw, 172px) !important;
+  line-height:.82 !important;
+  letter-spacing:-0.025em;
+}
+
+/* Keep the previously requested light-blue bottom CTA */
+.cta{
+  background:var(--pale) !important;
+}
+
+/* Journey: timeline left, key aligned to its top on the right */
+.journey .wrap{
+  display:grid;
+  grid-template-columns:minmax(0, 1fr) minmax(300px, 390px);
+  column-gap:48px;
+  align-items:start;
+}
+.journey .section-head{
+  grid-column:1 / -1;
+}
+.journey .timeline{
+  grid-column:1;
+  grid-row:2;
+  margin-top:36px;
+}
+.journey .journey-legend{
+  grid-column:2;
+  grid-row:2;
+  margin:36px 0 0 auto !important;
+  padding:0 !important;
+  display:flex !important;
+  flex-direction:column;
+  align-items:flex-start !important;
+  gap:12px !important;
+  width:max-content;
+  max-width:100%;
+}
+.journey .journey-legend-item{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  width:auto !important;
+  font-size:15px;
+  line-height:1.35;
+}
+.journey .journey-legend-dot{
+  width:22px;
+  height:22px;
+  flex:0 0 22px;
+}
+
+@media (max-width:860px){
+  .hero h1{
+    font-size:clamp(72px, 20vw, 118px) !important;
+    line-height:.86 !important;
+  }
+  .journey .wrap{
+    display:block;
+  }
+  .journey .journey-legend{
+    margin:22px 0 22px 0 !important;
+    width:100%;
+  }
+  .journey .timeline{
+    margin-top:24px;
+  }
+}
+</style><style>
+/* ===== Latest requested refinements ===== */
+
+/* Hero: move the left content slightly lower */
+.hero .wrap{
+  padding-top:18px !important;
+}
+
+/* Keep nomination-only CTA compact and WHITE */
+.cta{
+  background:var(--white) !important;
+  padding:48px 0 !important;
+}
+.cta .eyebrow{
+  margin-bottom:8px !important;
+}
+.cta h2{
+  margin-bottom:10px !important;
+}
+.cta p{
+  margin-bottom:22px !important;
+}
+.cta .switch{
+  margin-top:16px !important;
+}
+
+/* Keep the final CTA light blue */
+.bottom-cta{
+  background:var(--pale) !important;
+}
+
+/* Expanded collaboration section */
+.background{
+  background:var(--white) !important;
+  border-top:1px solid var(--line);
+  padding:72px 0 !important;
+}
+.background .collaboration-inner{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:34px;
+}
+.background .background-logos{
+  display:flex;
+  align-items:center;
+  gap:36px;
+  flex-wrap:wrap;
+}
+.background .background-logos img{
+  height:48px;
+  width:auto;
+  display:block;
+}
+.background .collaboration-intro{
+  max-width:860px;
+}
+.background .collaboration-intro h2{
+  font-size:clamp(34px,5vw,56px);
+  font-weight:900;
+  line-height:.98;
+  max-width:19ch;
+  margin:0 0 18px;
+}
+.background .collaboration-intro p{
+  max-width:76ch;
+  margin:0;
+  font-size:17px;
+  line-height:1.65;
+  opacity:.9;
+}
+.background .collaboration-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:24px;
+}
+.background .collaboration-card{
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:28px;
+  background:var(--white);
+}
+.background .collaboration-card h3{
+  font-family:'Barlow Condensed',sans-serif;
+  text-transform:uppercase;
+  color:var(--headline);
+  font-size:25px;
+  margin:0 0 14px;
+  letter-spacing:.01em;
+}
+.background .collaboration-card p{
+  margin:0 0 13px;
+  max-width:none;
+  font-size:15px;
+  line-height:1.6;
+  opacity:.88;
+}
+.background .collaboration-card p:last-child{
+  margin-bottom:0;
+}
+.background .collaboration-card a{
+  color:inherit;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+
+/* Do not allow a background visual in the tension sections */
+.tension{
+  background-image:none !important;
+}
+.tension::before,
+.tension::after{
+  content:none !important;
+  display:none !important;
+  background-image:none !important;
+}
+
+@media (max-width:860px){
+  .hero .wrap{
+    padding-top:10px !important;
+  }
+  .cta{
+    padding:40px 0 !important;
+  }
+  .background{
+    padding:56px 0 !important;
+  }
+  .background .collaboration-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+/* Nominator: make sure "Something needs to change" has no decorative artwork nearby */
+.tension + .reset-art-break.flora{
+  display:none !important;
+}
+</style><style>
+/* ===== RESET contact modal ===== */
+.reset-contact-modal{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  background:rgba(11,43,140,.28);
+  backdrop-filter:blur(4px);
+}
+.reset-contact-modal.is-open{display:flex;}
+.reset-contact-dialog{
+  position:relative;
+  width:min(680px,100%);
+  max-height:min(90vh,820px);
+  overflow:auto;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:34px;
+  box-shadow:0 24px 80px rgba(11,43,140,.22);
+}
+.reset-contact-close{
+  position:absolute;
+  top:14px;
+  right:16px;
+  width:40px;
+  height:40px;
+  border:0;
+  background:transparent;
+  color:var(--headline);
+  font-size:32px;
+  line-height:1;
+  cursor:pointer;
+}
+.reset-contact-eyebrow{
+  margin:0 0 8px;
+  color:var(--red);
+  font-family:'Barlow Condensed',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-weight:800;
+  font-size:14px;
+}
+.reset-contact-dialog h2{
+  margin:0 0 10px;
+  font-size:clamp(34px,6vw,54px);
+  line-height:.95;
+}
+.reset-contact-note{
+  margin:0 0 26px;
+  max-width:55ch;
+  color:var(--ink);
+  opacity:.82;
+}
+.reset-contact-form{
+  display:grid;
+  gap:18px;
+}
+.reset-contact-field{
+  display:grid;
+  gap:8px;
+}
+.reset-contact-field > label,
+.reset-contact-legend{
+  font-weight:700;
+  color:var(--ink);
+  font-size:15px;
+}
+.reset-contact-form input[type="text"],
+.reset-contact-form input[type="email"],
+.reset-contact-form textarea{
+  width:100%;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:var(--pale);
+  color:var(--ink);
+  padding:14px 16px;
+  font:inherit;
+  outline:none;
+}
+.reset-contact-form textarea{
+  min-height:130px;
+  resize:vertical;
+}
+.reset-contact-form input:focus,
+.reset-contact-form textarea:focus{
+  border-color:var(--headline);
+  box-shadow:0 0 0 3px rgba(23,69,224,.10);
+}
+.reset-contact-choice{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  border:0;
+  padding:0;
+  margin:0;
+}
+.reset-contact-choice label{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:11px 15px;
+  background:var(--pale);
+  cursor:pointer;
+}
+.reset-contact-choice input{
+  accent-color:var(--headline);
+}
+.reset-contact-submit{
+  justify-self:start;
+  border:0;
+  cursor:pointer;
+}
+.reset-contact-helper{
+  margin:-4px 0 0;
+  font-size:13px;
+  opacity:.66;
+}
+@media(max-width:620px){
+  .reset-contact-dialog{
+    padding:28px 20px 24px;
+    border-radius:18px;
+  }
+  .reset-contact-choice{
+    flex-direction:column;
+  }
+  .reset-contact-choice label{
+    border-radius:14px;
+  }
+}
+</style><style>
+/* ===== Nominator refinements ===== */
+
+/* Hero: move the left content down just a little more */
+.hero .wrap{
+  padding-top:30px !important;
+}
+
+/* Nomination form: keep all three eligibility controls perfectly aligned */
+.nomination-section .row3{
+  align-items:stretch !important;
+}
+.nomination-section .row3 .field{
+  display:grid !important;
+  grid-template-rows:68px 58px !important;
+  align-content:start !important;
+}
+.nomination-section .row3 .field > label{
+  height:68px !important;
+  min-height:68px !important;
+  margin:0 0 8px 0 !important;
+  display:flex !important;
+  align-items:flex-start !important;
+}
+.nomination-section .row3 .yesno{
+  margin-top:0 !important;
+  height:58px !important;
+  min-height:58px !important;
+  align-self:start !important;
+}
+
+/* Move the fish artwork out of Send a team */
+.team::before{
+  content:none !important;
+  display:none !important;
+  background-image:none !important;
+}
+
+/* Give the investment section room for the fish artwork on the upper right */
+.value-exchange{
+  position:relative !important;
+  overflow:hidden !important;
+}
+.value-exchange .wrap{
+  position:relative;
+  z-index:2;
+}
+
+.value-exchange::after{
+  content:"";
+  position:absolute;
+  z-index:1;
+  top:14px;
+  right:-26px;
+  width:520px;
+  height:315px;
+  background-image:url('assets/asset_02_a7f617853534.png');
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:contain;
+  pointer-events:none;
+  opacity:.95;
+}
+.value-exchange .section-head{
+  max-width:58%;
+}
+
+@media (max-width:980px){
+  .hero .wrap{
+    padding-top:24px !important;
+  }
+  .value-exchange::after{
+    width:390px;
+    height:240px;
+    top:18px;
+    right:-70px;
+    opacity:.82;
+  }
+  .value-exchange .section-head{
+    max-width:65%;
+  }
+}
+@media (max-width:760px){
+  .hero .wrap{
+    padding-top:18px !important;
+  }
+  .value-exchange::after{
+    display:none !important;
+  }
+  .value-exchange .section-head{
+    max-width:none;
+  }
+  .nomination-section .row3 .field{
+    display:flex !important;
+  }
+  .nomination-section .row3 .field > label{
+    height:auto !important;
+    min-height:0 !important;
+    margin-bottom:8px !important;
+  }
+  .nomination-section .row3 .yesno{
+    height:auto !important;
+    min-height:58px !important;
+  }
+}
+</style><style>
+/* ===== Nominator: mentors, white timeline, compact accordion form ===== */
+
+/* Timeline section must be white */
+.journey{
+  background:#ffffff !important;
+  background-image:none !important;
+}
+.journey::before,
+.journey::after{
+  content:none !important;
+  display:none !important;
+  background-image:none !important;
+}
+
+/* Exact candidate-style mentor section */
+.mentors-section{
+  background:#ffffff !important;
+}
+
+/* NOMINATION FORM: collapsed by default, opens accordion-style */
+.nomination-section.accordion-ready{
+  display:block !important;
+  background:#ffffff !important;
+  padding:0 !important;
+  max-height:0;
+  opacity:0;
+  overflow:hidden;
+  visibility:hidden;
+  transition:
+    max-height .72s cubic-bezier(.22,.8,.25,1),
+    opacity .28s ease,
+    padding .45s ease,
+    visibility 0s linear .72s;
+  scroll-margin-top:22px;
+}
+.nomination-section.accordion-ready.is-open{
+  max-height:5200px;
+  opacity:1;
+  visibility:visible;
+  padding:28px 0 38px !important;
+  transition:
+    max-height .82s cubic-bezier(.22,.8,.25,1),
+    opacity .3s ease .08s,
+    padding .45s ease,
+    visibility 0s linear 0s;
+}
+
+/* Make the form materially more compact */
+.nomination-section .nomination-wrap{
+  max-width:1080px !important;
+  padding:0 32px !important;
+}
+.nomination-section .nomination-header{
+  margin-bottom:18px !important;
+}
+.nomination-section .nomination-header .tag-year{
+  margin-bottom:8px !important;
+}
+.nomination-section .nomination-header h2{
+  margin-bottom:8px !important;
+  line-height:.95 !important;
+}
+.nomination-section .nomination-lede{
+  margin-bottom:0 !important;
+  line-height:1.4 !important;
+}
+
+.nomination-section form{
+  display:grid !important;
+  gap:14px !important;
+}
+.nomination-section fieldset{
+  margin:0 !important;
+  padding:18px 20px !important;
+  border-radius:16px !important;
+}
+.nomination-section legend{
+  margin-bottom:10px !important;
+}
+.nomination-section .field{
+  gap:5px !important;
+  margin-bottom:10px !important;
+}
+.nomination-section .field:last-child{
+  margin-bottom:0 !important;
+}
+.nomination-section .row2,
+.nomination-section .row3{
+  gap:14px !important;
+  margin-bottom:10px !important;
+}
+.nomination-section input[type="text"],
+.nomination-section input[type="email"],
+.nomination-section input[type="tel"],
+.nomination-section textarea{
+  min-height:46px !important;
+  padding:10px 12px !important;
+}
+.nomination-section textarea{
+  min-height:92px !important;
+}
+.nomination-section .yesno{
+  min-height:50px !important;
+  height:50px !important;
+  padding:8px 12px !important;
+}
+.nomination-section .row3 .field{
+  grid-template-rows:54px 50px !important;
+}
+.nomination-section .row3 .field > label{
+  height:54px !important;
+  min-height:54px !important;
+  margin-bottom:4px !important;
+}
+.nomination-section .consent{
+  padding:0 !important;
+}
+.nomination-section .submit-row{
+  margin-top:2px !important;
+}
+
+/* Keep Nominate buttons visually active when the accordion is open */
+.nominate-trigger[aria-expanded="true"]{
+  background:var(--headline);
+  color:#fff;
+  border-color:var(--headline);
+}
+
+@media(max-width:760px){
+  .nomination-section.accordion-ready.is-open{
+    padding:22px 0 30px !important;
+  }
+  .nomination-section .nomination-wrap{
+    padding:0 20px !important;
+  }
+  .nomination-section fieldset{
+    padding:16px !important;
+  }
+  .nomination-section .row3 .field{
+    display:flex !important;
+  }
+  .nomination-section .row3 .field > label{
+    height:auto !important;
+    min-height:0 !important;
+  }
+}
+</style><style>
+/* ===== Whom to nominate: tighter top spacing + jellyfish moved left ===== */
+.who{
+  position:relative !important;
+  overflow:hidden !important;
+  padding-top:46px !important;
+  padding-bottom:78px !important;
+  background:#ffffff !important;
+}
+
+/* Remove the former full-width spacer behaviour */
+.who .who-jelly-art{
+  position:absolute !important;
+  left:10px !important;
+  top:42px !important;
+  width:150px !important;
+  height:225px !important;
+  background-color:transparent !important;
+  background-repeat:no-repeat !important;
+  background-size:contain !important;
+  background-position:left top !important;
+  pointer-events:none;
+  z-index:0;
+}
+
+/* Keep all text safely clear of the jellyfish */
+.who .who-grid{
+  position:relative;
+  z-index:1;
+  padding-left:118px !important;
+}
+.who .section-head{
+  margin-bottom:28px !important;
+}
+
+@media (min-width:1280px){
+  .who .who-jelly-art{
+    left:max(12px, calc(50% - 680px)) !important;
+    width:165px !important;
+    height:240px !important;
+  }
+  .who .who-grid{
+    padding-left:92px !important;
+  }
+}
+
+@media (max-width:980px){
+  .who{
+    padding-top:38px !important;
+    padding-bottom:64px !important;
+  }
+  .who .who-jelly-art{
+    width:112px !important;
+    height:180px !important;
+    left:8px !important;
+    top:40px !important;
+  }
+  .who .who-grid{
+    padding-left:96px !important;
+  }
+}
+
+@media (max-width:760px){
+  .who{
+    padding-top:34px !important;
+  }
+  .who .who-jelly-art{
+    position:relative !important;
+    left:auto !important;
+    top:auto !important;
+    width:100px !important;
+    height:110px !important;
+    margin:0 0 4px 18px !important;
+  }
+  .who .who-grid{
+    padding-left:0 !important;
+  }
+}
+</style><style>
+/* ===== Enlarge jellyfish in "Whom to nominate" ===== */
+.who .who-jelly-art{
+  left:6px !important;
+  top:26px !important;
+  width:220px !important;
+  height:420px !important;
+  background-size:contain !important;
+  background-position:left top !important;
+}
+
+.who .who-grid{
+  padding-left:150px !important;
+}
+
+@media (min-width:1280px){
+  .who .who-jelly-art{
+    left:max(6px, calc(50% - 720px)) !important;
+    width:235px !important;
+    height:440px !important;
+  }
+  .who .who-grid{
+    padding-left:165px !important;
+  }
+}
+
+@media (max-width:980px){
+  .who .who-jelly-art{
+    width:155px !important;
+    height:300px !important;
+    top:28px !important;
+    left:6px !important;
+  }
+  .who .who-grid{
+    padding-left:115px !important;
+  }
+}
+
+@media (max-width:760px){
+  .who .who-jelly-art{
+    width:110px !important;
+    height:140px !important;
+    margin:0 0 6px 14px !important;
+  }
+  .who .who-grid{
+    padding-left:0 !important;
+  }
+}
+</style><style>
+/* ===== Man + plant artwork on timeline ===== */
+.journey .wrap{
+  position:relative !important;
+}
+.journey-man-plant{
+  position:absolute;
+  right:18px;
+  bottom:34px;
+  width:330px;
+  height:470px;
+  overflow:hidden;
+  pointer-events:none;
+  z-index:0;
+}
+.journey-man-plant img{
+  position:absolute;
+  width:1250px;
+  max-width:none !important;
+  height:auto;
+  left:-48px;
+  bottom:0;
+  display:block;
+}
+.journey .section-head,
+.journey .timeline,
+.journey .journey-legend{
+  position:relative;
+  z-index:2;
+}
+
+/* Preserve a clean right-side area for the artwork on desktop */
+@media (min-width:861px){
+  .journey .timeline{
+    padding-right:12px;
+  }
+}
+@media (max-width:1050px){
+  .journey-man-plant{
+    width:260px;
+    height:380px;
+    right:4px;
+    bottom:26px;
+  }
+  .journey-man-plant img{
+    width:1010px;
+    left:-46px;
+  }
+}
+@media (max-width:860px){
+  .journey-man-plant{
+    display:none;
+  }
+}
+</style><style>
+/* ===== Jellyfish: show the artwork at its original object size ===== */
+.who{
+  position:relative !important;
+  overflow:hidden !important;
+  background:#ffffff !important;
+}
+
+/* This frame crops the large transparent source canvas around the actual jellyfish.
+   The source itself is not scaled on large screens, so the jellyfish keeps its original size. */
+.who .who-jelly-art{
+  position:absolute !important;
+  left:max(18px, calc(50% - 900px)) !important;
+  top:34px !important;
+  width:350px !important;
+  height:440px !important;
+  overflow:hidden !important;
+  background:none !important;
+  pointer-events:none !important;
+  z-index:0 !important;
+}
+
+.who .who-jelly-art img{
+  position:absolute !important;
+  width:1920px !important;
+  height:1080px !important;
+  max-width:none !important;
+  left:-67px !important;
+  top:-87px !important;
+  display:block !important;
+}
+
+/* Keep the content safely above the artwork */
+.who .who-grid{
+  position:relative !important;
+  z-index:1 !important;
+}
+
+/* On medium desktop widths, shift the content right so the original-size jellyfish never overlaps it */
+@media (max-width:1600px) and (min-width:981px){
+  .who .who-grid{
+    padding-left:205px !important;
+  }
+}
+
+/* Scale the artwork only when the viewport becomes too narrow to preserve the desktop size */
+@media (max-width:980px){
+  .who .who-jelly-art{
+    width:230px !important;
+    height:300px !important;
+    left:8px !important;
+    top:34px !important;
+  }
+  .who .who-jelly-art img{
+    width:1344px !important;
+    height:756px !important;
+    left:-47px !important;
+    top:-61px !important;
+  }
+  .who .who-grid{
+    padding-left:160px !important;
+  }
+}
+
+@media (max-width:760px){
+  .who .who-jelly-art{
+    position:relative !important;
+    width:160px !important;
+    height:190px !important;
+    left:auto !important;
+    top:auto !important;
+    margin:0 0 4px 18px !important;
+  }
+  .who .who-jelly-art img{
+    width:864px !important;
+    height:486px !important;
+    left:-30px !important;
+    top:-39px !important;
+  }
+  .who .who-grid{
+    padding-left:0 !important;
+  }
+}
+</style><style>
+/* ===== Hero CTA row + brochure button ===== */
+.hero-actions{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:24px;
+}
+.hero-actions .hero-btn{
+  margin-top:0 !important;
+  margin-bottom:0 !important;
+}
+.hero-actions .hero-brochure-btn{
+  margin:0 !important;
+  background:#ffffff;
+  color:var(--headline);
+  border-color:var(--headline);
+}
+.hero-actions .hero-brochure-btn:hover{
+  background:var(--headline);
+  color:#ffffff;
+  border-color:var(--headline);
+}
+@media(max-width:620px){
+  .hero-actions{
+    gap:10px;
+  }
+  .hero-actions .btn{
+    width:100%;
+    text-align:center;
+  }
+}
+</style><style>
+/* ===== Hero brochure button: match primary red CTA ===== */
+.hero-actions .hero-brochure-btn{
+  background:var(--red) !important;
+  color:#ffffff !important;
+  border-color:var(--red) !important;
+}
+.hero-actions .hero-brochure-btn:hover{
+  background:#e83b2c !important;
+  color:#ffffff !important;
+  border-color:#e83b2c !important;
+}
+</style><style>
+/* ===== Slightly larger navigation ===== */
+.topnav-inner{
+  padding:16px 32px !important;
+}
+.topnav-logo img{
+  height:62px !important;
+  width:auto !important;
+}
+.topnav-links{
+  gap:30px !important;
+}
+.topnav-links a{
+  font-size:14.5px !important;
+}
+.topnav-btn{
+  padding:9px 21px !important;
+}
+
+@media(max-width:900px){
+  .topnav-inner{
+    padding:14px 20px !important;
+  }
+  .topnav-logo img{
+    height:58px !important;
+  }
+  .topnav-links{
+    gap:20px !important;
+  }
+  .topnav-links a{
+    font-size:14px !important;
+  }
+}
+
+@media(max-width:620px){
+  .topnav-inner{
+    padding:12px 18px !important;
+  }
+  .topnav-logo img{
+    height:54px !important;
+  }
+  .topnav-links{
+    gap:14px !important;
+  }
+  .topnav-links a{
+    font-size:13.5px !important;
+  }
+}
+</style><style>
+/* ===== Hero brochure button: outlined red ===== */
+.hero-actions .hero-brochure-btn{
+  background:transparent !important;
+  color:var(--red) !important;
+  border:2px solid var(--red) !important;
+}
+.hero-actions .hero-brochure-btn:hover{
+  background:var(--red) !important;
+  color:#ffffff !important;
+  border-color:var(--red) !important;
+}
+</style><style>
+/* ===== Artwork in BY NOMINATION ONLY ===== */
+.cta{
+  position:relative !important;
+  overflow:hidden !important;
+}
+.cta .wrap{
+  position:relative !important;
+  z-index:2 !important;
+}
+
+/* Artwork sits in a dedicated left gutter so it never crosses text */
+.cta-insect-art{
+  position:absolute;
+  z-index:1;
+  left:max(18px, calc(50% - 560px));
+  top:50%;
+  transform:translateY(-50%);
+  width:185px;
+  height:88%;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  pointer-events:none;
+}
+.cta-insect-art img{
+  display:block;
+  width:auto;
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+}
+
+/* Reserve space for the artwork while keeping the CTA content centered */
+@media (min-width:861px){
+  .cta .wrap{
+    padding-left:225px !important;
+    padding-right:65px !important;
+  }
+}
+@media (max-width:860px){
+  .cta-insect-art{
+    left:14px;
+    width:125px;
+    height:76%;
+  }
+  .cta .wrap{
+    padding-left:150px !important;
+    padding-right:20px !important;
+  }
+}
+@media (max-width:620px){
+  .cta-insect-art{
+    position:relative;
+    left:auto;
+    top:auto;
+    transform:none;
+    width:105px;
+    height:135px;
+    margin:0 0 8px 18px;
+  }
+  .cta .wrap{
+    padding-left:20px !important;
+    padding-right:20px !important;
+  }
+}
+
+/* ===== Move the decorative artwork from VALUE EXCHANGE to SEND A TEAM ===== */
+.value-exchange::after{
+  content:none !important;
+  display:none !important;
+  background-image:none !important;
+}
+
+.team{
+  position:relative !important;
+  overflow:hidden !important;
+}
+.team::after{
+  content:"" !important;
+  display:block !important;
+  position:absolute !important;
+  z-index:1 !important;
+  top:14px !important;
+  right:-26px !important;
+  width:520px !important;
+  height:315px !important;
+  background-image:url('assets/asset_02_a7f617853534.png') !important;
+  background-repeat:no-repeat !important;
+  background-size:contain !important;
+  background-position:right top !important;
+  opacity:.95 !important;
+  pointer-events:none !important;
+}
+.team .wrap{
+  position:relative !important;
+  z-index:2 !important;
+}
+.team > .wrap > .eyebrow,
+.team > .wrap > h2{
+  max-width:58% !important;
+}
+
+@media (max-width:1050px){
+  .team::after{
+    width:390px !important;
+    height:240px !important;
+    top:18px !important;
+    right:-70px !important;
+    opacity:.82 !important;
+  }
+}
+@media (max-width:760px){
+  .team::after{
+    display:none !important;
+  }
+  .team > .wrap > .eyebrow,
+  .team > .wrap > h2{
+    max-width:none !important;
+  }
+}
+</style><style>
+/* ===== BY NOMINATION ONLY: artwork fills the full section height ===== */
+.cta{
+  position:relative !important;
+  overflow:hidden !important;
+}
+
+/* Full-height artwork panel on the left */
+.cta-insect-art{
+  position:absolute !important;
+  left:0 !important;
+  top:0 !important;
+  bottom:0 !important;
+  width:31% !important;
+  height:100% !important;
+  transform:none !important;
+  margin:0 !important;
+  display:block !important;
+  overflow:hidden !important;
+  pointer-events:none !important;
+  z-index:1 !important;
+}
+
+.cta-insect-art img{
+  position:absolute !important;
+  left:0 !important;
+  top:0 !important;
+  width:100% !important;
+  height:100% !important;
+  max-width:none !important;
+  max-height:none !important;
+  object-fit:cover !important;
+  object-position:left center !important;
+}
+
+/* Keep all CTA copy/buttons clear of the artwork */
+.cta .wrap{
+  position:relative !important;
+  z-index:2 !important;
+  width:100% !important;
+  padding-left:34% !important;
+  padding-right:4% !important;
+  box-sizing:border-box !important;
+}
+
+/* Keep centered alignment within the available text area */
+.cta .wrap,
+.cta .eyebrow,
+.cta h2,
+.cta p,
+.cta .switch{
+  text-align:center !important;
+}
+.cta .eyebrow{
+  justify-content:center !important;
+}
+
+@media (max-width:980px){
+  .cta-insect-art{
+    width:28% !important;
+  }
+  .cta .wrap{
+    padding-left:31% !important;
+    padding-right:3% !important;
+  }
+}
+
+@media (max-width:700px){
+  /* On mobile the artwork still fills the section vertically,
+     but uses a narrower strip so it never crosses the text. */
+  .cta-insect-art{
+    width:23% !important;
+  }
+  .cta .wrap{
+    padding-left:26% !important;
+    padding-right:16px !important;
+  }
+}
+
+@media (max-width:480px){
+  .cta-insect-art{
+    width:20% !important;
+  }
+  .cta .wrap{
+    padding-left:23% !important;
+    padding-right:12px !important;
+  }
+}
+</style><style>
+/* ===== CTA artwork: fill section height without cropping the insect ===== */
+.cta{
+  position:relative !important;
+  overflow:hidden !important;
+}
+
+.cta-insect-art{
+  position:absolute !important;
+  left:0 !important;
+  top:0 !important;
+  bottom:0 !important;
+  width:31% !important;
+  height:100% !important;
+  transform:none !important;
+  margin:0 !important;
+  overflow:hidden !important;
+  pointer-events:none !important;
+  z-index:1 !important;
+}
+
+/* The artwork fills the FULL section height.
+   Width stays proportional, so the insect is never cut off. */
+.cta-insect-art img{
+  position:absolute !important;
+  left:0 !important;
+  top:0 !important;
+  height:100% !important;
+  width:auto !important;
+  max-width:none !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  object-position:left center !important;
+  display:block !important;
+}
+
+/* Keep all content completely clear of the artwork */
+.cta .wrap{
+  position:relative !important;
+  z-index:2 !important;
+  padding-left:34% !important;
+  padding-right:4% !important;
+}
+
+@media(max-width:980px){
+  .cta-insect-art{
+    width:28% !important;
+  }
+  .cta .wrap{
+    padding-left:31% !important;
+    padding-right:3% !important;
+  }
+}
+
+@media(max-width:700px){
+  .cta-insect-art{
+    width:24% !important;
+  }
+  .cta .wrap{
+    padding-left:27% !important;
+    padding-right:14px !important;
+  }
+}
+
+@media(max-width:480px){
+  .cta-insect-art{
+    width:21% !important;
+  }
+  .cta .wrap{
+    padding-left:24% !important;
+    padding-right:12px !important;
+  }
+}
+</style></head>
+<body>
+<nav class="topnav">
+<div class="wrap topnav-inner">
+<a class="topnav-logo" href="https://www.pontsbschool.com">
+<img alt="École des Ponts Business School" src="assets/asset_09_91010053a2a5.png"/>
+</a>
+<div class="topnav-links">
+<a class="topnav-btn" href="https://www.pontsbschool.com/corporate/reset">Back to program</a>
+</div>
+</div>
+</nav>
+<!-- HERO -->
+<section class="hero">
+<img alt="" class="wing" src="assets/asset_10_e29d7abc0305.png"/>
+<div class="wrap">
+<span class="tag-year">Cohort 2027 · Nominators</span>
+<h1>RESET</h1>
+<p class="hero-sub">An accelerator for leaders who are building a new economy, <b>and for those who believe in them.</b></p><div class="hero-actions"><a aria-controls="nomination-form" aria-expanded="false" class="btn hero-btn nominate-trigger" href="#nomination-form">Nominate</a><a aria-label="Download RESET brochure (PDF)" class="btn hero-btn hero-brochure-btn" download="RESET-Nominators-Brochure.pdf" href="./RESET-Nominators-Brochure.pdf" type="application/pdf">Download brochure</a></div>
+</div>
+</section>
+<!-- TENSION -->
+<section class="tension">
+<div class="wrap grid">
+<div>
+<div class="eyebrow">Something needs to change</div>
+<h2>Not just in your organisation, but in the economy and in the world.</h2>
+<p class="lede">The future economy will not build itself. It will be built by leaders who care about more than financial return, who feel the urgency, and who inspire through their values rather than their authority. You know one. Maybe more than one.</p>
+<div class="callout">And you know someone who can help.</div>
+</div>
+<div class="panel">
+<h4>Think of someone</h4>
+<ul>
+<li>Not someone who is just good at their job, but someone good for the world around them.</li>
+<li>Someone whose leadership you trust because of who they are, not their title.</li>
+<li>Someone who inspires and leads with values, empathy and genuine conviction.</li>
+<li>Someone aching to do more, who just needs the space, the tools, and the people.</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- HOW IT WORKS -->
+<section class="how">
+<div class="wrap">
+<div class="section-head" style="margin-bottom:32px;">
+<div class="eyebrow">How it works</div>
+<h2>What the 7 months actually look like</h2>
+</div>
+<p class="lede" style="max-width:70ch;">Two 5-day in-person gatherings in Paris anchor the program: one to set the stage and one to close it. In between, the cohort meets online twice a month, three hours at a time, to dive deep into one of six transversal and entangled themes shaping the world. A personal mentor plus a peer coaching group walk with you throughout and beyond the program, not just during the seven months.</p>
+<div class="how-stats">
+<div><b>7</b><span>Months</span></div>
+<div><b>2</b><span>In-person gatherings</span></div>
+<div><b>6</b><span>Themes</span></div>
+<div><b>3</b><span>Champions of Impact conferences</span></div>
+<div><b>50k+</b><span>Peer community</span></div>
+</div>
+</div>
+</section>
+<!-- PILLARS -->
+<section class="pillars">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">What RESET stands for</div>
+<h2>Five ideas define the core of the program</h2>
+</div>
+<div class="pillar-grid">
+<div class="pillar"><h3>Regeneration</h3><p>Rebuilding rather than just sustaining, with strategies that replenish natural, social, and economic systems.</p></div>
+<div class="pillar"><h3>Entrepreneurship</h3><p>Driving active, creative agency, turning systemic insight into tangible, thriving ventures.</p></div>
+<div class="pillar"><h3>Systems</h3><p>Mapping complexity, seeing the interconnected dynamics behind isolated symptoms.</p></div>
+<div class="pillar"><h3>Ethics</h3><p>Refusing easy compromises – bringing courage and responsibility into executive decisions.</p></div>
+<div class="pillar"><h3>Trust</h3><p>Rebuilding the relational glue through psychological safety, peer accountability, and transparent alliances.</p></div>
+</div>
+</div>
+</section>
+<!-- WHOM TO NOMINATE -->
+<section class="who"><div aria-hidden="true" class="who-jelly-art reset-art-break jelly"><img alt="" src="assets/asset_04_593ac3c55541.png"/></div>
+<div class="wrap who-grid">
+<div>
+<div class="section-head" style="margin-bottom:36px;">
+<div class="eyebrow">Whom to nominate</div>
+<h2>Four signs someone belongs in this cohort</h2>
+</div>
+<div class="who-item">
+<div class="num">01</div>
+<div><h3>Leaders with a voice inside them</h3><p>They feel the growing gap between the system they operate in and the leader they want to be. They haven't found the right space to act on it yet, but the conviction is there. You can see it.</p></div>
+</div>
+<div class="who-item">
+<div class="num">02</div>
+<div><h3>People who want to act, not just think</h3><p>They're done with analysis and good intentions, and are looking for the guidance, tools, and community to make change real.</p></div>
+</div>
+<div class="who-item">
+<div class="num">03</div>
+<div><h3>Builders of a different future</h3><p>They look at their organisation, sector, or the world, and know it can do better. That belief is fuel, not frustration.</p></div>
+</div>
+<div class="who-item">
+<div class="num">04</div>
+<div><h3>Seekers of depth and connection</h3><p>They want a genuine transformation, a shift in how they think, lead, and show up, and are ready to do the work it requires.</p></div>
+</div>
+</div>
+<div class="criteria">
+<h4>Who you're looking for</h4>
+<ul>
+<li>Bachelor's degree or above</li>
+<li>Next-generation experience leaders</li>
+<li>In a decision-making position</li>
+<li>At a genuine point of inflection</li>
+<li>Courageous enough to commit</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- RIPPLE -->
+<section class="ripple">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">More than just a recommendation</div>
+<h2>The ripples go further than you can imagine</h2>
+</div>
+<div class="ripple-grid">
+<div class="ripple-card"><b>Their team</b><p>Gains a leader who listens differently, who creates space for others to think bigger and feel their work truly matters.</p></div>
+<div class="ripple-card"><b>The organisation</b><p>Gains someone who returns with clarity, courage, and a concrete plan for change, not just a manager but an inspiring leader.</p></div>
+<div class="ripple-card"><b>The sector</b><p>Gains a voice that asks better questions, makes braver decisions, and changes the conversations happening around them.</p></div>
+<div class="ripple-card"><b>The next generation</b><p>Gains a mentor and champion who has done the inner work, and knows how to help others do theirs.</p></div>
+</div>
+</div>
+</section>
+<!-- VALUE EXCHANGE -->
+<section class="value-exchange">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">What your organisation gets back and pays forward</div>
+<h2>An investment that returns twice</h2>
+</div>
+<div class="value-grid">
+<div class="value-card">
+<h3>What comes back</h3>
+<ul>
+<li>A natural leader, a catalyst and driver of change</li>
+<li>Motivation, commitment, and loyalty</li>
+<li>Living proof that the organisation walks the talk</li>
+<li>A leader capable of turning insight into action</li>
+</ul>
+</div>
+<div class="value-card">
+<h3>What gets paid forward</h3>
+<ul>
+<li>Building solutions for the planet, not just the short term</li>
+<li>Choosing courage and integrity over the easy way out</li>
+<li>Leading with depth, authenticity, and empathy</li>
+<li>Standing accountable far beyond the bottom line</li>
+<li>Inspiring and mentoring the generations to come</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- SEND A TEAM -->
+<section class="team">
+<div class="wrap">
+<div class="eyebrow" style="color:var(--red);">Send a team</div>
+<h2>Build a movement. Multiply the impact.</h2>
+<div class="team-grid">
+<div class="team-card"><h3>A common language</h3><p>A team that understands complexity, ethics, and systems thinking the same way, and can move faster because of it.</p></div>
+<div class="team-card"><h3>A shared commitment</h3><p>They make their pledge to each other and to the organisation. Accountability doesn't need to be managed; it's already there.</p></div>
+<div class="team-card"><h3>A powerful catalyst</h3><p>Not a working group or a task force, but leaders who've done the inner work and lead real transformation together, from the inside.</p></div>
+</div>
+</div>
+</section>
+<!-- JOURNEY -->
+<section class="journey">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Your nominee's journey, 2027</div>
+<h2>A 7-month hybrid journey, built around presence</h2>
+</div>
+<div aria-label="Journey format legend" class="journey-legend"><div class="journey-legend-item"><span aria-hidden="true" class="journey-legend-dot in-person"></span><span>In-person: Presence Gatherings</span></div><div class="journey-legend-item"><span aria-hidden="true" class="journey-legend-dot online"></span><span>Online sessions on Tuesdays &amp; Thursdays at 17:00</span></div></div><div class="timeline">
+<div class="t-line"></div>
+<div class="t-item milestone">
+<span class="t-dot"></span>
+<div class="t-content">
+<div class="when">April</div>
+<h3>Kick off: Making Waves</h3>
+<div class="dates">Paris + ChangeNow · Fri 23 – Fri 30</div>
+</div>
+</div>
+<div class="t-item">
+<span class="t-dot"></span>
+<div class="t-content">
+<div class="when">May</div>
+<h3>Natural Systems</h3>
+<div class="dates">Tue 18 + Thu 20</div>
+</div>
+</div>
+<div class="t-item">
+<span class="t-dot"></span>
+<div class="t-content">
+<div class="when">June</div>
+<h3>Technology</h3>
+<div class="dates">Tue 15 + Thu 18</div>
+</div>
+</div>
+<div class="t-item">
+<span class="t-dot"></span>
+<div class="t-content">
+<div class="when">July</div>
+<h3>Leadership &amp; Governance</h3>
+<div class="dates">Tue 27 + Thu 29</div>
+</div>
+</div>
+<div class="t-item">
+<span class="t-dot"></span>
+<div class="t-content">
+<div class="when">August / September</div>
+<h3>Finance &amp; Financial Systems</h3>
+<div class="dates">Tue 31 + Thu 02</div>
+</div>
+</div>
+<div class="t-item">
+<span class="t-dot"></span>
+<div class="t-content">
+<div class="when">September</div>
+<h3>Trade &amp; Exchange</h3>
+<div class="dates">Tue 28 + Thu 30</div>
+</div>
+</div>
+<div class="t-item">
+<span class="t-dot"></span>
+<div class="t-content">
+<div class="when">October</div>
+<h3>Regulation &amp; Government</h3>
+<div class="dates">Tue 12 + Thu 14</div>
+</div>
+</div>
+<div class="t-item milestone">
+<span class="t-dot"></span>
+<div class="t-content">
+<div class="when">November</div>
+<h3>Closing &amp; Graduation</h3>
+<div class="dates">Paris · Mon 11 – Sat 20</div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="journey-man-plant"><img alt="" src="assets/asset_11_8e08b19b7db6.png"/></div></div>
+</section>
+<!-- WHY -->
+<section class="why">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Why RESET, and not another program</div>
+<h2>Four commitments that set this apart</h2>
+</div>
+<div class="why-grid">
+<div class="why-item"><h3>Not problems taught, but problems sat with</h3><p>Most programs give frameworks. We ask participants to first understand and feel a problem, and let it change how they think.</p></div>
+<div class="why-item"><h3>Multiple lenses, not one</h3><p>Business, political, psychology, ethics, ecology, economics: real change needs more than one way of seeing.</p></div>
+<div class="why-item"><h3>People, not just experts</h3><p>Inspiring professionals, indigenous communities, and local changemakers whose way of seeing the world challenges what participants thought they knew.</p></div>
+<div class="why-item"><h3>Mentored during and after</h3><p>Every participant is guided throughout the program and supported beyond it, because their pledge is only the beginning.</p></div>
+</div>
+</div>
+<div aria-hidden="true" class="reset-art-break give"></div>
+</section>
+<!-- MENTORS & FACULTY -->
+<section class="mentors-section" id="mentors">
+<div class="wrap">
+<div class="mentors-head">
+<div>
+<div class="eyebrow">Our force</div>
+<h2>Meet some of the mentors &amp; faculty</h2>
+</div>
+<p class="lede">Throughout the RESET journey, participants learn alongside a global group of practitioners, investors, authors, sustainability leaders and systems thinkers who bring lived experience into the program.</p>
+</div>
+<div class="mentors-grid">
+<article class="mentor-card">
+<h3>Marcel Fukayama</h3>
+<p class="mentor-role">Movement Builder Towards a Positive Impact Economy</p>
+<p class="mentor-location">São Paulo, Brazil</p>
+</article>
+<article class="mentor-card">
+<h3>Fokko Wientjes</h3>
+<p class="mentor-role">Sustainability Strategist</p>
+<p class="mentor-location">Geneva, Switzerland</p>
+</article>
+<article class="mentor-card">
+<h3>Andrew Kuper</h3>
+<p class="mentor-role">Investor, Entrepreneur and Author</p>
+<p class="mentor-location">Sydney, Australia</p>
+</article>
+<article class="mentor-card">
+<h3>Jacqueline Novogratz</h3>
+<p class="mentor-role">Author of “The Blue Sweater” and “Manifesto for a Moral Revolution.”</p>
+<p class="mentor-location">New York, United States</p>
+</article>
+<article class="mentor-card">
+<h3>Daniela Barone Soares</h3>
+<p class="mentor-role">Creator of an impact investing powerhouse</p>
+<p class="mentor-location">United Kingdom</p>
+</article>
+<article class="mentor-card">
+<h3>Mafalda Duarte</h3>
+<p class="mentor-role">Executive Director of the Green Climate Fund</p>
+<p class="mentor-location">Seoul, Korea</p>
+</article>
+<article class="mentor-card">
+<h3>Bayo Akomolafe</h3>
+<p class="mentor-role">Author &amp; Hubert Humphrey Distinguished Professor</p>
+<p class="mentor-location">India</p>
+</article>
+<article class="mentor-card">
+<h3>Helmy Abouleish</h3>
+<p class="mentor-role">President Biodynamic Federation Demeter International</p>
+<p class="mentor-location">Cairo, Egypt</p>
+</article>
+</div>
+</div>
+</section>
+<!-- PRICING -->
+<section class="pricing">
+<div class="wrap">
+<div class="eyebrow">Practical info &amp; pricing</div>
+<h2 style="font-size:clamp(32px,4.5vw,48px); font-weight:800;">Start program 23 April 2027</h2>
+<div class="price-grid">
+<div class="price-card">
+<div class="label">Tuition</div>
+<div class="value amount">€15,000</div>
+<p>Exclusive of travel and living expenses.</p>
+</div>
+<div class="price-card">
+<div class="label">Groups, SMEs &amp; entrepreneurs</div>
+<div class="value amount">€12,000</div>
+<p>Group rate, minimum 2 applicants per organization.</p>
+</div>
+<div class="price-card">
+<div class="label">Application deadline</div>
+<div class="value">15 March 2027</div>
+<p>Cohort size limited to 25 leaders.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA -->
+<section class="cta"><div aria-hidden="true" class="cta-insect-art"><img alt="" src="assets/asset_12_678f2a985b59.png"/></div>
+<div class="wrap">
+<div class="eyebrow" style="justify-content:center;">By nomination only</div>
+<h2>Someone has to believe they belong here.</h2>
+<p>Fill in the nomination form with their name, a few details, and a few lines on why you believe they should join. We'll take it from there.</p>
+<a aria-controls="nomination-form" aria-expanded="false" class="btn nominate-trigger" href="#nomination-form">Nominate</a>
+<div class="switch">Were you nominated yourself? <a href="candidates.html">Go to the candidate's page →</a></div>
+</div>
+</section>
+<!-- NOMINATION FORM — revealed when a Nominate CTA is clicked -->
+<section aria-hidden="true" aria-labelledby="nomination-title" class="nomination-section accordion-ready" id="nomination-form">
+<div class="nomination-wrap">
+<header class="nomination-header">
+<span class="tag-year">LEADERSHIP: RESET, 2027</span>
+<h2 id="nomination-title">Nominate a<span>future leader</span></h2>
+<p class="nomination-lede">Someone has to believe they belong here. Thank you for putting their name forward, take a few minutes to tell us why.</p>
+</header>
+<form id="nominationForm">
+<fieldset>
+<legend>About you (the nominator)</legend>
+<div class="field">
+<label for="nom-name">Full name <span class="req">*</span></label>
+<input autocomplete="name" id="nom-name" name="nom-name" required="" type="text"/>
+</div>
+<div class="row2">
+<div class="field">
+<label for="nom-title">Title</label>
+<input id="nom-title" name="nom-title" type="text"/>
+</div>
+<div class="field">
+<label for="nom-org">Organization</label>
+<input id="nom-org" name="nom-org" type="text"/>
+</div>
+</div>
+<div class="row2">
+<div class="field">
+<label for="nom-email">Email <span class="req">*</span></label>
+<input autocomplete="email" id="nom-email" name="nom-email" required="" type="email"/>
+</div>
+<div class="field">
+<label for="nom-phone">Phone</label>
+<input autocomplete="tel" id="nom-phone" name="nom-phone" type="tel"/>
+</div>
+</div>
+<div class="field">
+<label for="nom-relationship">Relationship to candidate &amp; how long you've known them <span class="req">*</span></label>
+<input id="nom-relationship" name="nom-relationship" placeholder="e.g. their manager for 4 years" required="" type="text"/>
+</div>
+</fieldset>
+<fieldset>
+<legend>About the candidate</legend>
+<div class="field">
+<label for="cand-name">Full name <span class="req">*</span></label>
+<input id="cand-name" name="cand-name" required="" type="text"/>
+</div>
+<div class="field">
+<label for="cand-role">Current role &amp; organization <span class="req">*</span></label>
+<input id="cand-role" name="cand-role" required="" type="text"/>
+</div>
+<div class="row3">
+<div class="field">
+<label>Holds a Bachelor's degree? <span class="req">*</span></label>
+<div class="yesno">
+<label><input name="cand-degree" required="" type="radio" value="yes"/> Yes</label>
+<label><input name="cand-degree" type="radio" value="no"/> No</label>
+</div>
+</div>
+<div class="field">
+<label>Roughly 30–40 years old? <span class="req">*</span></label>
+<div class="yesno">
+<label><input name="cand-age" required="" type="radio" value="yes"/> Yes</label>
+<label><input name="cand-age" type="radio" value="no"/> No</label>
+</div>
+</div>
+<div class="field">
+<label>In a decision-making position? <span class="req">*</span></label>
+<div class="yesno">
+<label><input name="cand-decision" required="" type="radio" value="yes"/> Yes</label>
+<label><input name="cand-decision" type="radio" value="no"/> No</label>
+</div>
+</div>
+</div>
+</fieldset>
+<fieldset>
+<legend>The nomination</legend>
+<div class="field">
+<label for="q-leader">Why do you believe this person is a leader who wants to build a different future? <span class="req">*</span></label>
+<textarea id="q-leader" maxlength="800" name="q-leader" required=""></textarea>
+</div>
+<div class="field">
+<label for="q-courage">Describe a moment you saw them act with courage or integrity, even when it was costly. <span class="req">*</span></label>
+<textarea id="q-courage" maxlength="800" name="q-courage" required=""></textarea>
+</div>
+<div class="field">
+<label for="q-why">In a few lines, why do you believe they should join RESET? <span class="req">*</span></label>
+<textarea id="q-why" maxlength="600" name="q-why" required=""></textarea>
+</div>
+</fieldset>
+<fieldset>
+<div class="consent">
+<input id="consent" name="consent" required="" type="checkbox"/>
+<label for="consent">I confirm the candidate is aware of and welcomes this nomination, and I agree that École des Ponts Business School and Progressio Foundation may use the information above to process this nomination.</label>
+</div>
+</fieldset>
+<div class="submit-row">
+<button type="submit">Submit nomination</button>
+<div class="status" id="statusMsg"></div>
+</div>
+</form>
+</div>
+</section>
+<!-- BACKGROUND -->
+<section class="background"><div class="wrap collaboration-inner"><div class="background-logos"><img alt="École des Ponts Business School" src="assets/asset_09_91010053a2a5.png"/><a aria-label="Progressio Foundation" class="progressio-link" href="https://progressio.foundation/" rel="noopener noreferrer" target="_blank"><img alt="Progressio Foundation" src="assets/asset_13_b0a6717c78e1.png"/></a></div><div class="collaboration-intro"><div class="eyebrow">Built together</div><h2>Two institutions, one shared ambition</h2><p>Leadership: RESET brings together École des Ponts Business School and Progressio Foundation. The collaboration combines executive education and leadership development with a long-standing international ecosystem of entrepreneurs, impact builders, and civic innovators, creating a space where reflection can lead to practical, responsible action.</p></div><div class="collaboration-grid"><article class="collaboration-card"><h3><a href="https://progressio.foundation/" rel="noopener noreferrer" target="_blank">Progressio Foundation</a></h3><p>Founded in 1989 in Rotterdam by Marcello Palazzi, alongside Paul Kloppenborg and Pjotr Hesseling, Progressio is a Dutch nonprofit that finds, connects, and supports entrepreneurs driving human progress.</p><p>Over more than 35 years, it has been at the centre of 35+ ventures and 350+ initiatives, engaging 35,000+ global decision-makers. Its focus areas include civic economy, B Corps, regenerative business, and impact investing. Palazzi co-founded B Lab Europe in 2013 and has worked with the UN, the Vatican, and world leaders on responsible business agendas.</p></article><article class="collaboration-card"><h3>École des Ponts Business School</h3><p>Founded in 1987 by Célia Russo, École des Ponts Business School is the graduate business arm of the prestigious École nationale des ponts et chaussées, established in 1747 and part of Institut Polytechnique de Paris.</p><p>With the motto “In business to make a better world,” it was the first school in France to offer an English-language MBA. It offers Executive MBA and DBA programs focused on leadership, innovation, and sustainability, with 7,000+ alumni worldwide. Accredited by AMBA and AACSB, it is currently led by Dean Alon Rozen.</p></article></div></div></section>
+<!-- BOTTOM CTA -->
+<section class="bottom-cta">
+<div class="wrap">
+<h2>Ready to take the next step?</h2>
+<p>Get in touch, nominate a future leader, or explore the full program brochure.</p>
+<div class="bottom-cta-buttons">
+<a class="btn" data-reset-contact="true" href="#reset-contact-form">Contact us</a>
+<a aria-controls="nomination-form" aria-expanded="false" class="btn btn-primary nominate-trigger" href="#nomination-form">Nominate</a>
+<a class="btn" download="RESET-Nominators-Brochure.pdf" href="./RESET-Nominators-Brochure.pdf" type="application/pdf">Download brochure</a>
+</div>
+</div>
+</section>
+<footer>
+  Leadership: RESET 2027 · École des Ponts Business School × Progressio Foundation
+</footer>
+<script>
+(function(){
+  function px(n){ return n + 'px'; }
+
+  function positionLine(timeline){
+    var line = timeline.querySelector('.t-line');
+    var dots = timeline.querySelectorAll('.t-dot');
+    if(!line || dots.length === 0) return;
+    var timelineRect = timeline.getBoundingClientRect();
+    var firstRect = dots[0].getBoundingClientRect();
+    var lastRect = dots[dots.length - 1].getBoundingClientRect();
+    var centerX = (firstRect.left + firstRect.width / 2) - timelineRect.left;
+    var centerYFirst = (firstRect.top + firstRect.height / 2) - timelineRect.top;
+    var centerYLast = (lastRect.top + lastRect.height / 2) - timelineRect.top;
+    line.style.left = px(centerX - 1);
+    line.style.top = px(centerYFirst);
+    line.dataset.targetHeight = Math.max(0, centerYLast - centerYFirst);
+    if(line.dataset.revealed === 'true'){
+      var prevTransition = line.style.transition;
+      line.style.transition = 'none';
+      line.style.height = px(line.dataset.targetHeight);
+      void line.offsetHeight;
+      line.style.transition = prevTransition || '';
+    }
+  }
+
+  function init(){
+    var timelines = document.querySelectorAll('.timeline');
+    timelines.forEach(positionLine);
+
+    var items = document.querySelectorAll('.t-item');
+    items.forEach(function(item, i){
+      var content = item.querySelector('.t-content');
+      if(content){ content.style.transitionDelay = (i * 0.08) + 's'; }
+      var dot = item.querySelector('.t-dot');
+      if(dot){ dot.style.transitionDelay = (i * 0.08 + 0.2) + 's'; }
+    });
+
+    if(!('IntersectionObserver' in window)){
+      items.forEach(function(item){ item.classList.add('in-view'); });
+      timelines.forEach(function(tl){
+        var line = tl.querySelector('.t-line');
+        if(line){ line.style.height = px(line.dataset.targetHeight || 0); line.dataset.revealed = 'true'; }
+      });
+      return;
+    }
+
+    var itemObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          itemObserver.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.25});
+    items.forEach(function(item){ itemObserver.observe(item); });
+
+    var lineObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          var line = entry.target.querySelector('.t-line');
+          if(line){
+            line.style.height = px(line.dataset.targetHeight || 0);
+            line.dataset.revealed = 'true';
+          }
+          lineObserver.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.1});
+    timelines.forEach(function(tl){ lineObserver.observe(tl); });
+  }
+
+  window.addEventListener('load', init);
+  window.addEventListener('resize', function(){
+    document.querySelectorAll('.timeline').forEach(positionLine);
+  });
+})();
+</script>
+<div aria-hidden="true" class="reset-contact-modal" id="reset-contact-form">
+<div aria-labelledby="reset-contact-title" aria-modal="true" class="reset-contact-dialog" role="dialog">
+<button aria-label="Close contact form" class="reset-contact-close" type="button">×</button>
+<div class="reset-contact-eyebrow">Contact RESET</div>
+<h2 id="reset-contact-title">Get in touch</h2>
+<p class="reset-contact-note">Send us your message and we will answer within a maximum of 5 business days.</p>
+<form class="reset-contact-form" id="resetContactForm">
+<div class="reset-contact-field">
+<label for="resetContactName">Name</label>
+<input autocomplete="name" id="resetContactName" name="name" required="" type="text"/>
+</div>
+<fieldset class="reset-contact-field reset-contact-choice">
+<legend class="reset-contact-legend">I am</legend>
+<label><input name="role" required="" type="radio" value="Nominator"/> I am a Nominator</label>
+<label><input name="role" required="" type="radio" value="Candidate"/> I am a Candidate</label>
+</fieldset>
+<div class="reset-contact-field">
+<label for="resetContactEmail">Email address</label>
+<input autocomplete="email" id="resetContactEmail" name="email" required="" type="email"/>
+</div>
+<div class="reset-contact-field">
+<label for="resetContactComment">Comment</label>
+<textarea id="resetContactComment" name="comment" required=""></textarea>
+</div>
+<button class="btn reset-contact-submit" type="submit">Submit</button>
+<p class="reset-contact-helper">Submitting will open your email application with the message prepared for info@pontsbschool.com.</p>
+</form>
+</div>
+</div>
+<script>
+(function(){
+  const modal = document.getElementById('reset-contact-form');
+  const form = document.getElementById('resetContactForm');
+  if(!modal || !form) return;
+
+  const closeBtn = modal.querySelector('.reset-contact-close');
+  const nameInput = document.getElementById('resetContactName');
+
+  function openContactModal(){
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+    window.setTimeout(() => nameInput && nameInput.focus(), 50);
+  }
+
+  function closeContactModal(){
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+    if(location.hash === '#reset-contact-form'){
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+  }
+
+  document.querySelectorAll('a[href="#reset-contact-form"], [data-reset-contact]').forEach(el => {
+    el.addEventListener('click', function(e){
+      e.preventDefault();
+      openContactModal();
+      history.replaceState(null, '', '#reset-contact-form');
+    });
+  });
+
+  closeBtn && closeBtn.addEventListener('click', closeContactModal);
+  modal.addEventListener('click', function(e){
+    if(e.target === modal) closeContactModal();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && modal.classList.contains('is-open')) closeContactModal();
+  });
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!form.reportValidity()) return;
+
+    const data = new FormData(form);
+    const body = [
+      'Name: ' + (data.get('name') || ''),
+      'Role: ' + (data.get('role') || ''),
+      'Email address: ' + (data.get('email') || ''),
+      '',
+      'Comment:',
+      (data.get('comment') || '')
+    ].join('\\n');
+
+    const mailto = 'mailto:info@pontsbschool.com'
+      + '?subject=' + encodeURIComponent('RESET Contact form:')
+      + '&body=' + encodeURIComponent(body);
+
+    window.location.href = mailto;
+  });
+
+  if(location.hash === '#reset-contact-form'){
+    openContactModal();
+  }
+})();
+</script><script>
+(function(){
+  const section = document.getElementById('nomination-form');
+  const triggers = document.querySelectorAll('.nominate-trigger');
+  const form = document.getElementById('nominationForm');
+  const status = document.getElementById('statusMsg');
+  if(!section) return;
+
+  function setOpen(open, shouldScroll){
+    section.classList.toggle('is-open', open);
+    section.setAttribute('aria-hidden', open ? 'false' : 'true');
+
+    triggers.forEach(function(trigger){
+      trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    if(open && shouldScroll){
+      window.setTimeout(function(){
+        section.scrollIntoView({behavior:'smooth', block:'start'});
+      }, 120);
+    }
+  }
+
+  triggers.forEach(function(trigger){
+    trigger.setAttribute('aria-controls', 'nomination-form');
+    trigger.setAttribute('aria-expanded', 'false');
+
+    trigger.addEventListener('click', function(e){
+      e.preventDefault();
+      const willOpen = !section.classList.contains('is-open');
+      setOpen(willOpen, willOpen);
+
+      if(history.replaceState){
+        if(willOpen){
+          history.replaceState(null, '', '#nomination-form');
+        }else{
+          history.replaceState(null, '', location.pathname + location.search);
+        }
+      }
+    });
+  });
+
+  /* Direct links from the PDF still open the accordion automatically */
+  if(window.location.hash === '#nomination-form' || window.location.hash === '#nomination-section'){
+    setOpen(true, false);
+    window.addEventListener('load', function(){
+      window.setTimeout(function(){
+        section.scrollIntoView({behavior:'smooth', block:'start'});
+      }, 100);
+    }, {once:true});
+  } else {
+    setOpen(false, false);
+  }
+
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      if(status){
+        status.textContent = "Thank you, your nomination has been received. We'll be in touch with the candidate soon.";
+        status.classList.add('show');
+      }
+      form.reset();
+    });
+  }
+})();
+</script></body>
+</html>
